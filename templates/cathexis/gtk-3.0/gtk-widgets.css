@@ -166,7 +166,7 @@ GtkAssistant .frame:backdrop{border:none;}
  **********/
 GtkLinkButton * {
 	text-decoration: underline;
-	color: @selected_bg_color;
+	color: @link_color;
 }
 
 .button,
