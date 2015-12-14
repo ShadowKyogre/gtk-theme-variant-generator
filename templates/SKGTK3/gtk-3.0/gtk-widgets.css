@@ -1,0 +1,454 @@
+/**
+ * Style classes.
+ *
+ * The style classes rules apply to any widget defining that class.
+ * For example, the .buttons class applies to all types of buttons,
+ * and allows you to theme all these types of buttons using a single
+ * set of rules.
+ *
+ * You can use all style properties defined for any of the class
+ * members in the class rules. These properties can be found in
+ * 'Template\Widgets\WidgetName.css'.
+ */
+ 
+*
+{
+	background-color: @background-color;
+	color: @foreground-color;
+	-GtkHTML-link-color: @link-color;
+	-GtkIMHtml-hyperlink-color: @link-color;
+	-GtkWidget-link-color: @link-color;
+	-GtkWidget-visited-link-color: @link-color;
+}
+
+*:insensitive{
+	/*background-color: shade(@background-color,0.85);*/
+	color: shade(@foreground-color,0.5);
+}
+
+GtkImage
+{
+	background: none;
+}
+
+.accelerator {
+	/* Members: GtkAccelLabel. */
+}
+
+.frame {
+	/* Members: GtkFrame. */
+	border-color: shade(@background-color, 0.8);
+}
+
+.radio {
+	/* Members: GtkCellRendererToggle, GtkRadioMenuItem, GtkRadioButton. */
+}
+
+.calendar {
+	/* Members: GtkCalendar. */
+}
+
+.check {
+	/* Members: GtkCheckMenuItem, GtkCellRendererToggle, GtkCheckButton. */
+}
+
+.menubar {
+	/* Members: GtkMenuBar. */
+}
+
+/* Members: GtkSpinner. */
+
+@keyframes spinner {
+0.00% {background-image: url('assets/spin/tmp-0.gif')}
+3.45% {background-image: url('assets/spin/tmp-1.gif')}
+6.90% {background-image: url('assets/spin/tmp-2.gif')}
+10.34% {background-image: url('assets/spin/tmp-3.gif')}
+13.79% {background-image: url('assets/spin/tmp-4.gif')}
+17.24% {background-image: url('assets/spin/tmp-5.gif')}
+20.69% {background-image: url('assets/spin/tmp-6.gif')}
+24.14% {background-image: url('assets/spin/tmp-7.gif')}
+27.59% {background-image: url('assets/spin/tmp-8.gif')}
+31.03% {background-image: url('assets/spin/tmp-9.gif')}
+34.48% {background-image: url('assets/spin/tmp-10.gif')}
+37.93% {background-image: url('assets/spin/tmp-11.gif')}
+41.38% {background-image: url('assets/spin/tmp-12.gif')}
+44.83% {background-image: url('assets/spin/tmp-13.gif')}
+48.28% {background-image: url('assets/spin/tmp-14.gif')}
+51.72% {background-image: url('assets/spin/tmp-15.gif')}
+55.17% {background-image: url('assets/spin/tmp-16.gif')}
+58.62% {background-image: url('assets/spin/tmp-17.gif')}
+62.07% {background-image: url('assets/spin/tmp-18.gif')}
+65.52% {background-image: url('assets/spin/tmp-19.gif')}
+68.97% {background-image: url('assets/spin/tmp-20.gif')}
+72.41% {background-image: url('assets/spin/tmp-21.gif')}
+75.86% {background-image: url('assets/spin/tmp-22.gif')}
+79.31% {background-image: url('assets/spin/tmp-23.gif')}
+82.76% {background-image: url('assets/spin/tmp-24.gif')}
+86.21% {background-image: url('assets/spin/tmp-25.gif')}
+89.66% {background-image: url('assets/spin/tmp-26.gif')}
+93.10% {background-image: url('assets/spin/tmp-27.gif')}
+96.55% {background-image: url('assets/spin/tmp-28.gif')}
+100.00% {background-image: url('assets/spin/tmp-0.gif')}
+}
+
+@keyframes ispinner {
+0.00% {background-image: url('assets/ispin/tmp-0.gif')}
+3.45% {background-image: url('assets/ispin/tmp-1.gif')}
+6.90% {background-image: url('assets/ispin/tmp-2.gif')}
+10.34% {background-image: url('assets/ispin/tmp-3.gif')}
+13.79% {background-image: url('assets/ispin/tmp-4.gif')}
+17.24% {background-image: url('assets/ispin/tmp-5.gif')}
+20.69% {background-image: url('assets/ispin/tmp-6.gif')}
+24.14% {background-image: url('assets/ispin/tmp-7.gif')}
+27.59% {background-image: url('assets/ispin/tmp-8.gif')}
+31.03% {background-image: url('assets/ispin/tmp-9.gif')}
+34.48% {background-image: url('assets/ispin/tmp-10.gif')}
+37.93% {background-image: url('assets/ispin/tmp-11.gif')}
+41.38% {background-image: url('assets/ispin/tmp-12.gif')}
+44.83% {background-image: url('assets/ispin/tmp-13.gif')}
+48.28% {background-image: url('assets/ispin/tmp-14.gif')}
+51.72% {background-image: url('assets/ispin/tmp-15.gif')}
+55.17% {background-image: url('assets/ispin/tmp-16.gif')}
+58.62% {background-image: url('assets/ispin/tmp-17.gif')}
+62.07% {background-image: url('assets/ispin/tmp-18.gif')}
+65.52% {background-image: url('assets/ispin/tmp-19.gif')}
+68.97% {background-image: url('assets/ispin/tmp-20.gif')}
+72.41% {background-image: url('assets/ispin/tmp-21.gif')}
+75.86% {background-image: url('assets/ispin/tmp-22.gif')}
+79.31% {background-image: url('assets/ispin/tmp-23.gif')}
+82.76% {background-image: url('assets/ispin/tmp-24.gif')}
+86.21% {background-image: url('assets/ispin/tmp-25.gif')}
+89.66% {background-image: url('assets/ispin/tmp-26.gif')}
+93.10% {background-image: url('assets/ispin/tmp-27.gif')}
+96.55% {background-image: url('assets/ispin/tmp-28.gif')}
+100.00% {background-image: url('assets/ispin/tmp-0.gif')}
+}
+
+.spinner:active {
+	animation: spinner 1s infinite linear;
+}
+
+.spinner:active:insensitive {
+	animation: ispinner 1s infinite linear;
+}
+
+.spinner {
+	background-color: transparent;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-image: url('assets/spin.gif');
+}
+
+.spinner:insensitive {
+	background-image: url('assets/ispin.gif');
+}
+
+
+
+.menu {
+	/* Members: GtkCheckMenuItem, GtkRadioMenuItem, GtkMenu, GtkMenuItem. */
+}
+
+.tooltip {
+	/* Members: GtkTooltip. */
+	color: @tooltip-fg-color;
+	border: 1px solid shade(@tooltipbg-color, 2.2);
+	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@tooltipbg-color,1.2)), 
+												color-stop(0.50,shade(@tooltipbg-color,1.3)), 
+												color-stop(0.51,shade(@tooltipbg-color,1.5)), 
+												color-stop(1.00,shade(@tooltipbg-color,1.2)));
+}
+
+.tooltip * {
+	background: none;
+	border: none;
+}
+
+.cell {
+	/* Members: GtkCellRendererToggle. */
+	color: @entryfg-color;
+	background-color: @entrybg-color;
+}
+
+column-header .button * {
+	background: none;
+}
+
+.viewport {
+	/* Members: GtkViewport. */
+}
+
+.grip {
+	/* Members: GtkWindow. */
+}
+
+.popup {
+	/* Members: GtkMenu. */
+}
+
+.scrolled-window {
+	/* Members: GtkScrolledWindow. */
+}
+
+.slider {
+	trough-border: 1;
+	slider-width: 13;
+	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@background-color,1.2)), 
+												color-stop(0.50,shade(@background-color,1.3)), 
+												color-stop(0.51,shade(@background-color,1.5)), 
+												color-stop(1.00,shade(@background-color,1.2)));
+	/* Members: GtkScale, GtkScrollbar. */
+}
+
+.scrollbar.slider {
+	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@entryfg-color,0.7)), 
+												color-stop(0.50,shade(@entryfg-color,0.8)), 
+												color-stop(0.51,shade(@entryfg-color,1.0)), 
+												color-stop(1.00,shade(@entryfg-color,0.7)));
+}
+
+.scrollbar.slider.vertical {
+	background: -gtk-gradient(linear, 0 0, 1 0, color-stop(0.0,shade(@entryfg-color,0.7)), 
+												color-stop(0.50,shade(@entryfg-color,0.8)), 
+												color-stop(0.51,shade(@entryfg-color,1.0)), 
+												color-stop(1.00,shade(@entryfg-color,0.7)));
+}
+
+/*
+GtkSwitch {
+	background:yellow;
+}*/
+
+.notebook {
+	/* Members: GtkNotebook. */
+	border: 1px solid shade(@background-color,0.8);
+}
+
+GtkFrame
+{
+	border: 1px solid shade(@background-color,0.5);
+}
+
+.notebook tab {
+	border: 1px solid shade(@background-color,1.5);
+	padding: 3px 2px;
+}
+
+.notebook tab.top, .notebook tab.bottom {
+	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@background-color,0.7)), 
+												color-stop(0.50,shade(@background-color,0.8)), 
+												color-stop(0.51,shade(@background-color,1.0)), 
+												color-stop(1.00,shade(@background-color,0.7)));
+}
+
+.notebook tab.left, .notebook tab.right {
+	background: -gtk-gradient(linear, 0 0, 1 0, color-stop(0.0,shade(@background-color,0.7)), 
+												color-stop(0.50,shade(@background-color,0.8)), 
+												color-stop(0.51,shade(@background-color,1.0)), 
+												color-stop(1.00,shade(@background-color,0.7)));
+}
+
+.trough {
+	/* Members: GtkProgressBar, GtkScale, GtkScrollbar. */
+	background:shade(@background-color, 0.75);
+	border: 1px solid shade(@background-color, 0.5);
+}
+
+.scale.trough.highlight.left, .scale.trough.highlight.right
+{
+	background: -gtk-gradient(linear, 0 0, 0 1,
+			color-stop(0.0, shade(@entryfg-color, 1.2)),
+			color-stop(0.20, shade(@entryfg-color, 1.0)),
+			color-stop(0.80, shade(@entryfg-color, 1.0)),
+			color-stop(1.0, shade(@entryfg-color, 1.2))
+			);
+}
+
+.scale.trough.vertical.highlight.bottom, .scale.trough.vertical.highlight.top
+{
+	background: -gtk-gradient(linear, 0 0, 1 0,
+			color-stop(0.0, shade(@entryfg-color, 1.2)),
+			color-stop(0.20, shade(@entryfg-color, 1.0)),
+			color-stop(0.80, shade(@entryfg-color, 1.0)),
+			color-stop(1.0, shade(@entryfg-color, 1.2))
+			);
+}
+
+.background {
+	/* Members: GtkWindow. */
+}
+
+.toolbar {
+	/* Members: GtkToolbar. */
+}
+
+.toolbar .button * {
+	background: none;
+}
+
+.dock {
+	/* Members: GtkHandleBox. */
+}
+
+.button, .slider, .notebook tab:active {
+	border: 1px solid shade(@background-color,2.0);
+	padding: 3px 2px;
+	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@background-color,1.2)), 
+												color-stop(0.50,shade(@background-color,1.3)), 
+												color-stop(0.51,shade(@background-color,1.5)), 
+												color-stop(1.00,shade(@background-color,1.2)));
+	/* Members: GtkCheckButton, GtkRadioButton, GtkButton, GtkToggleButton. */
+}
+
+.notebook tab.top:active {
+	border-bottom: none;
+}
+.notebook tab.left:active {
+	border-right: none;
+}
+.notebook tab.bottom:active {
+	border-top: none;
+}
+.notebook tab.right:active {
+	border-left: none;
+}
+
+.button:insensitive, .slider:insensitive {
+	border: 1px solid shade(@background-color,1.3);
+	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@background-color,0.95)), 
+												color-stop(0.50,shade(@background-color,1.05)), 
+												color-stop(0.51,shade(@background-color,1.45)), 
+												color-stop(1.00,shade(@background-color,1.05)));
+	/* Members: GtkCheckButton, GtkRadioButton, GtkButton, GtkToggleButton. */
+}
+
+.button:focus
+{
+	border-color: shade(@entryfg-color, 0.9);
+}
+
+.button:hover {
+	border: 1px solid shade(@background-color, 2.4);
+}
+
+GtkLinkButton * {
+	text-decoration: underline;
+	color: @link-color;
+}
+
+.progressbar {
+	/* Members: GtkProgressBar, GtkCellRendererProgress. */
+	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@entryfg-color,1.0)), 
+												color-stop(0.50,shade(@entryfg-color,1.1)), 
+												color-stop(0.51,shade(@entryfg-color,1.4)), 
+												color-stop(1.00,shade(@entryfg-color,1.0)));
+	color: @entryselfg-color;
+}
+.progressbar.vertical {
+	background: -gtk-gradient(linear, 0 0, 1 0, color-stop(0.0,shade(@entryfg-color,1.0)), 
+												color-stop(0.50,shade(@entryfg-color,1.1)), 
+												color-stop(0.51,shade(@entryfg-color,1.4)), 
+												color-stop(1.00,shade(@entryfg-color,1.0)));
+}
+
+.arrow {
+	/* Members: GtkArrow. */
+}
+
+.menuitem {
+	/* Members: GtkMenuItem. */
+	color: @menufg-color;
+	background-color: @menubg-color;
+	padding: 3px 2px;
+}
+
+GtkLabel, GtkLabel:insensitive {
+	background:none;
+}
+
+GtkTextView:selected, .entry:selected,
+.menu .menuitem:hover, .menuitem:hover, .menubar.menuitem:hover, .menubar .menuitem:hover,  .menuitem GtkLabel:hover
+/*.cell:selected, GtkComboBox .cell:hover*/
+{
+	color: @entryselfg-color;
+	background-color: @entryselbg-color;
+}
+
+.menu .menuitem:hover GtkLabel
+{
+	color: @entryselfg-color;
+	background-color: @entryselbg-color;
+}
+
+.menu >.menubar.menuitem:hover,
+.menubar >.menuitem:hover > GtkLabel {
+	background-color: @entryselbg-color;
+	color: @entryselfg-color;
+	transition: 150ms ease-in-out;
+}
+
+GtkTextView, .entry {
+	/* Members: GtkEntry. */
+	color: @entryfg-color;
+	background-color: @entrybg-color;
+	padding: 3px 2px;
+	border: 1px solid shade(@background-color, 0.5);
+}
+
+GtkTextView:focused, .entry:focused {
+	border: 1px solid shade(@entrybg-color, 1.7);
+}
+
+.entry:insensitive {
+	/* Members: GtkEntry. */
+	color: shade(@entryfg-color,0.5);
+	/*background-color: shade(@entrybg-color,0.85);*/
+}
+
+.expander {
+	/* Members: GtkExpander. */
+}
+
+GtkComboBox .button * {
+	background: none;
+}
+
+
+/*
+ * Imports for widget-specific theming.
+ */
+
+@import url("widgets/gtkwindow.css");
+@import url("widgets/gtkswitch.css");
+@import url("widgets/gtkscrollbar.css");
+@import url("widgets/gtkcalendar.css");
+@import url("widgets/gtkcombobox.css");
+@import url("widgets/gtkwidget.css");
+@import url("widgets/gtknotebook.css");
+@import url("widgets/gtkmessagedialog.css");
+@import url("widgets/gtktreeview.css");
+@import url("widgets/gtkcheckmenuitem.css");
+@import url("widgets/gtkprogressbar.css");
+@import url("widgets/gtkscale.css");
+@import url("widgets/gtkbuttonbox.css");
+@import url("widgets/gtkinfobar.css");
+@import url("widgets/gtkscrolledwindow.css");
+@import url("widgets/gtkrange.css");
+@import url("widgets/gtkdialog.css");
+@import url("widgets/gtktoolbutton.css");
+@import url("widgets/gtkiconview.css");
+@import url("widgets/gtkmenu.css");
+@import url("widgets/gtkmenuitem.css");
+@import url("widgets/gtkspinbutton.css");
+@import url("widgets/gtktoolbar.css");
+@import url("widgets/gtkcheckbutton.css");
+@import url("widgets/gtkpaned.css");
+@import url("widgets/gtktoolitemgroup.css");
+@import url("widgets/gtkarrow.css");
+@import url("widgets/gtkassistant.css");
+@import url("widgets/gtktextview.css");
+@import url("widgets/gtkexpander.css");
+@import url("widgets/gtkmenubar.css");
+@import url("widgets/gtkentry.css");
+@import url("widgets/gtkbutton.css");
+@import url("widgets/gtkstatusbar.css");

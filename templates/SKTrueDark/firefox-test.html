@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+
+<head>
+<title>Dust TrueDark Test</title>
+<style type="text/css">
+    div>label { display:inline-block; min-width:150px; vertical-align:top; text-align:right }
+</style>
+
+</head>
+
+<body>
+
+<h1>This stuff is supposed to be visible in firefox.</h1>
+
+<form action="firefox-test.html" method="get">
+
+<div>
+    <label>Input:</label>
+    <input type="text" value="Do you see me?">
+    <input type="text" value="Some sites assume the background of the input is white; that sucks" 
+        style="color:black; width:500px">
+</div>
+
+<div>
+    <label>Textarea:</label>
+    <textarea cols="20" rows="4">Are you with me tonight?</textarea>
+    <textarea cols="20" rows="4" style="color:black">My boys in the pit are you with me tonight?</textarea>
+</div>
+
+<div>
+    <label>Checkboxes:</label>
+    <span>
+        <label><input type="checkbox"> False</label>
+        <label><input type="checkbox" checked="checked"> True</label>
+    </span>
+</div>
+
+<div>
+    <label>Radiobuttons:</label>
+    <span>
+        <label><input type="radio"> Unchecked</label>
+        <label><input type="radio" checked="checked"> Checked</label>
+        <label><input type="radio"> Unchecked</label>
+    </span>
+</div>
+
+<div>
+    <label>Combos:</label>
+    <select>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
+</div>
+
+<div>
+    <label>Listbox:</label>
+    <select multiple>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>    
+</div>
+
+<div>
+    <label>Buttons:</label>
+    <input type="submit">
+    <button>submit</button>
+</div>
+
+
+</form>
+
+</body>
+
+</html>

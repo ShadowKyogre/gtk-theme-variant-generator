@@ -1,0 +1,82 @@
+pixmap_path "/home/shadowkyogre/.gnome-color-chooser/images/"
+
+style "sk-style"
+{
+  engine "murrine"
+  {
+    menubaritemstyle = 1
+    menuitemstyle = 2
+    menustyle = 0
+    roundness = 0
+    separatorstyle = 1
+  }
+
+  bg[NORMAL] = "#19002E"
+  bg[PRELIGHT] = "#0065FF"
+  bg[SELECTED] = "#0065FF"
+  bg[ACTIVE] = "#19002E"
+  bg[INSENSITIVE] = "#19002E"
+  fg[NORMAL] = "#0065FF"
+  fg[PRELIGHT] = "#000000"
+  fg[SELECTED] = "#000000"
+  fg[ACTIVE] = "#0065FF"
+  fg[INSENSITIVE] = "#350062"
+  base[NORMAL] = "#001940"
+  base[PRELIGHT] = "#19002E"
+  base[SELECTED] = "#0065FF"
+  base[ACTIVE] = "#001940"
+  base[INSENSITIVE] = "#001940"
+  text[NORMAL] = "#0065FF"
+  text[PRELIGHT] = "#0065FF"
+  text[SELECTED] = "#000000"
+  text[ACTIVE] = "#0065FF"
+  text[INSENSITIVE] = "#002866"
+  GtkToolbar::shadow_type = GTK_SHADOW_NONE
+}
+class "GtkWidget" style "sk-style"
+
+style "sk-scrollbar"
+{
+  engine "murrine"
+  {
+  }
+
+  bg[NORMAL] = "#340061"
+}
+widget_class "*Scrollbar" style "sk-scrollbar"
+
+style "sk-tooltips"
+{
+  bg[NORMAL] = "#002866"
+  fg[NORMAL] = "#0065FF"
+}
+widget "gtk-tooltip*" style "sk-tooltips"
+
+style "sk-button"
+{
+  engine "murrine"
+  {
+  }
+
+  bg[NORMAL] = "#19002E"
+  bg[PRELIGHT] = "#002154"
+  bg[SELECTED] = "#002154"
+  bg[ACTIVE] = "#19002E"
+  bg[INSENSITIVE] = "#19002E"
+  fg[NORMAL] = "#0065FF"
+  fg[PRELIGHT] = "#0065FF"
+  fg[ACTIVE] = "#0065FF"
+  fg[INSENSITIVE] = "#29004B"
+}
+widget_class "*.<GtkButton>*" style "sk-button"
+
+style "sk-combobox"
+{
+  text[NORMAL] = "#0065FF"
+  text[PRELIGHT] = "#0065FF"
+  text[ACTIVE] = "#000000"
+  text[INSENSITIVE] = "#21003D"
+}
+widget_class "*.<GtkComboBox>.<GtkCellView>" style "sk-combobox"
+
+gtk-icon-sizes = "gtk-button=16,16:"

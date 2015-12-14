@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=SKTrueDark
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=SKTrueDark
+MetacityTheme=SKTrueDark
+IconTheme=gnome
+GtkColorScheme=fg_color:#ff0000,bg_color:#19002E,text_color:#ff0000,base_color:#400000,selected_fg_color:#000000,selected_bg_color:#ff0000,tooltip_fg_color:#ff0000,tooltip_bg_color:#400000
+CursorTheme=DMZ-White
+CursorSize=18
+NotificationTheme=nodoka

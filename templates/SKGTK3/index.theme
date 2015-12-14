@@ -1,0 +1,11 @@
+[X-GNOME-Metatheme]
+Name=SKGTK3
+Comment=Theme for GTK3
+
+Type=X-GNOME-Metatheme
+Encoding=UTF-8
+#GtkTheme=<yourawesometheme>
+#MetacityTheme=<yourawesometheme>
+#IconTheme=<name_of_icon_theme>
+#CursorTheme=<name_of_cursor_theme>
+#CursorSize=<24>
