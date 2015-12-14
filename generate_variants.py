@@ -125,7 +125,7 @@ if __name__ == "__main__":
 	
 	NOISY=args.verbose
 
-	cparser = configparser.ConfigParser()
+	cparser = configparser.ConfigParser(interpolation=configparser.ExtendedInterpolation())
 	cparser.optionxform = lambda option: option
 	if path.isfile(args.config_file):
 		cparser.read(args.config_file)
