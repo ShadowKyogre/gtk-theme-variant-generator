@@ -201,17 +201,17 @@ column-header .button * {
 }
 
 .scrollbar.slider {
-	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@entryfg-color,0.7)), 
-												color-stop(0.50,shade(@entryfg-color,0.8)), 
-												color-stop(0.51,shade(@entryfg-color,1.0)), 
-												color-stop(1.00,shade(@entryfg-color,0.7)));
+	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@entryselbg-color,0.7)), 
+												color-stop(0.50,shade(@entryselbg-color,0.8)), 
+												color-stop(0.51,shade(@entryselbg-color,1.0)), 
+												color-stop(1.00,shade(@entryselbg-color,0.7)));
 }
 
 .scrollbar.slider.vertical {
-	background: -gtk-gradient(linear, 0 0, 1 0, color-stop(0.0,shade(@entryfg-color,0.7)), 
-												color-stop(0.50,shade(@entryfg-color,0.8)), 
-												color-stop(0.51,shade(@entryfg-color,1.0)), 
-												color-stop(1.00,shade(@entryfg-color,0.7)));
+	background: -gtk-gradient(linear, 0 0, 1 0, color-stop(0.0,shade(@entryselbg-color,0.7)), 
+												color-stop(0.50,shade(@entryselbg-color,0.8)), 
+												color-stop(0.51,shade(@entryselbg-color,1.0)), 
+												color-stop(1.00,shade(@entryselbg-color,0.7)));
 }
 
 /*
@@ -257,20 +257,20 @@ GtkFrame
 .scale.trough.highlight.left, .scale.trough.highlight.right
 {
 	background: -gtk-gradient(linear, 0 0, 0 1,
-			color-stop(0.0, shade(@entryfg-color, 1.2)),
-			color-stop(0.20, shade(@entryfg-color, 1.0)),
-			color-stop(0.80, shade(@entryfg-color, 1.0)),
-			color-stop(1.0, shade(@entryfg-color, 1.2))
+			color-stop(0.0, shade(@entryselbg-color, 1.2)),
+			color-stop(0.20, shade(@entryselbg-color, 1.0)),
+			color-stop(0.80, shade(@entryselbg-color, 1.0)),
+			color-stop(1.0, shade(@entryselbg-color, 1.2))
 			);
 }
 
 .scale.trough.vertical.highlight.bottom, .scale.trough.vertical.highlight.top
 {
 	background: -gtk-gradient(linear, 0 0, 1 0,
-			color-stop(0.0, shade(@entryfg-color, 1.2)),
-			color-stop(0.20, shade(@entryfg-color, 1.0)),
-			color-stop(0.80, shade(@entryfg-color, 1.0)),
-			color-stop(1.0, shade(@entryfg-color, 1.2))
+			color-stop(0.0, shade(@entryselbg-color, 1.2)),
+			color-stop(0.20, shade(@entryselbg-color, 1.0)),
+			color-stop(0.80, shade(@entryselbg-color, 1.0)),
+			color-stop(1.0, shade(@entryselbg-color, 1.2))
 			);
 }
 
@@ -338,17 +338,17 @@ GtkLinkButton * {
 
 .progressbar {
 	/* Members: GtkProgressBar, GtkCellRendererProgress. */
-	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@entryfg-color,1.0)), 
-												color-stop(0.50,shade(@entryfg-color,1.1)), 
-												color-stop(0.51,shade(@entryfg-color,1.4)), 
-												color-stop(1.00,shade(@entryfg-color,1.0)));
+	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@entryselbg-color,1.0)), 
+												color-stop(0.50,shade(@entryselbg-color,1.1)), 
+												color-stop(0.51,shade(@entryselbg-color,1.4)), 
+												color-stop(1.00,shade(@entryselbg-color,1.0)));
 	color: @entryselfg-color;
 }
 .progressbar.vertical {
-	background: -gtk-gradient(linear, 0 0, 1 0, color-stop(0.0,shade(@entryfg-color,1.0)), 
-												color-stop(0.50,shade(@entryfg-color,1.1)), 
-												color-stop(0.51,shade(@entryfg-color,1.4)), 
-												color-stop(1.00,shade(@entryfg-color,1.0)));
+	background: -gtk-gradient(linear, 0 0, 1 0, color-stop(0.0,shade(@entryselbg-color,1.0)), 
+												color-stop(0.50,shade(@entryselbg-color,1.1)), 
+												color-stop(0.51,shade(@entryselbg-color,1.4)), 
+												color-stop(1.00,shade(@entryselbg-color,1.0)));
 }
 
 .arrow {
@@ -369,6 +369,15 @@ GtkLabel, GtkLabel:insensitive {
 GtkTextView:selected, .entry:selected,
 .menu .menuitem:hover, .menuitem:hover, .menubar.menuitem:hover, .menubar .menuitem:hover,  .menuitem GtkLabel:hover
 /*.cell:selected, GtkComboBox .cell:hover*/
+{
+	color: @entryselfg-color;
+	background-color: @entryselbg-color;
+}
+
+.cell
+row:selected,
+row:active,
+row:selected:focused
 {
 	color: @entryselfg-color;
 	background-color: @entryselbg-color;
