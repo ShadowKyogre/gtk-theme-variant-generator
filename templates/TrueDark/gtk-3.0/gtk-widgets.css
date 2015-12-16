@@ -29,7 +29,7 @@
 	color: shade(@foreground-color,0.5);
 }
 
-GtkImage
+GtkImage, GtkLabel, .button *
 {
 	background: none;
 }
@@ -520,3 +520,4 @@ GtkComboBox * {
 @import url("widgets/gtkentry.css");
 @import url("widgets/gtkbutton.css");
 @import url("widgets/gtkstatusbar.css");
+
