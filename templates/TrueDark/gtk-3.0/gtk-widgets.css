@@ -243,7 +243,6 @@ GtkFrame
 }
 
 .notebook tab {
-	border-top: 1px solid shade(@background-color,1.5);
 	padding: 5px 8px;
 }
 
@@ -259,6 +258,22 @@ GtkFrame
 												color-stop(0.50,shade(@background-color,0.8)), 
 												color-stop(0.51,shade(@background-color,1.0)), 
 												color-stop(1.00,shade(@background-color,0.7)));
+}
+
+.notebook tab.top {
+	border-top: 1px solid shade(@background-color,1.5);
+}
+
+.notebook tab.bottom {
+	border-bottom: 1px solid shade(@background-color,1.5);
+}
+
+.notebook tab.left {
+	border-left: 1px solid shade(@background-color,1.5);
+}
+
+.notebook tab.right {
+	border-right: 1px solid shade(@background-color,1.5);
 }
 
 .trough {
@@ -353,24 +368,24 @@ GtkFrame
 }
 
 .notebook tab.top:active {
-	border-right: 1px solid shade(@background-color, 0.8);
-	border-left:  1px solid shade(@background-color, 0.8);
+	border-right:  1px solid shade(@background-color, 0.8);
+	border-left:   1px solid shade(@background-color, 0.8);
 	border-bottom: none;
 }
 .notebook tab.left:active {
-	border-top: 1px solid shade(@background-color, 0.8);
-	border-bottom:  1px solid shade(@background-color, 0.8);
-	border-right: none;
+	border-top:    1px solid shade(@background-color, 0.8);
+	border-bottom: 1px solid shade(@background-color, 0.8);
+	border-right:  none;
 }
 .notebook tab.bottom:active {
 	border-right: 1px solid shade(@background-color, 0.8);
 	border-left:  1px solid shade(@background-color, 0.8);
-	border-top: none;
+	border-top:   none;
 }
 .notebook tab.right:active {
-	border-top: 1px solid shade(@background-color, 0.8);
-	border-bottom:  1px solid shade(@background-color, 0.8);
-	border-left: none;
+	border-top:    1px solid shade(@background-color, 0.8);
+	border-bottom: 1px solid shade(@background-color, 0.8);
+	border-left:   none;
 }
 
 .button:insensitive, .slider:insensitive {
