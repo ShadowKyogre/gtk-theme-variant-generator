@@ -319,6 +319,12 @@ GtkFrame
 												color-stop(1.00,shade(@background-color,1.1)));
 }
 
+.toolbar .button
+{
+	background:none;
+	border: none;
+}
+
 .toolbar .button:checked
 {
 	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0, shade(mix(@background-color, @entryselbg-color, 0.9),1.0)), 
@@ -428,7 +434,7 @@ GtkLabel, GtkLabel:insensitive {
 }
 
 GtkTextView:selected, .entry:selected,
-.menu .menuitem:hover, .menuitem:hover, .menubar.menuitem:hover, .menubar .menuitem:hover,  .menuitem GtkLabel:hover
+.menu .menuitem:hover, .menubar.menuitem:hover, .menubar .menuitem:hover
 /*.cell:selected, GtkComboBox .cell:hover*/
 {
 	color: @entryselfg-color;
@@ -446,8 +452,8 @@ row:selected:focused
 
 .menu .menuitem:hover > GtkLabel
 {
-	color: @entryselfg-color;
 	background-color: @entryselbg-color;
+	color: @entryselfg-color;
 }
 
 .menu >.menubar.menuitem:hover,
@@ -482,8 +488,17 @@ GtkTextView:focused, .entry:focused {
 GtkComboBox .button * {
 	background: none;
 }
+
+GtkComboBox *:insensitive {
+	color: shade(@entryfg-color,0.5);
+}
+
 GtkComboBox * {
 	background: none;
+}
+
+GtkComboBox .menuitem:hover * {
+	color: @entryselfg-color;
 }
 
 /*
