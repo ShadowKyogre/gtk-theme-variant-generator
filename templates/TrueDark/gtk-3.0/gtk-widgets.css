@@ -29,7 +29,7 @@
 	color: shade(@foreground-color,0.5);
 }
 
-GtkImage, GtkLabel, .button *
+GtkImage, .button *
 {
 	background: none;
 }
@@ -440,7 +440,7 @@ row:selected:focused
 	background-color: @entryselbg-color;
 }
 
-.menu .menuitem:hover GtkLabel
+.menu .menuitem:hover > GtkLabel
 {
 	color: @entryselfg-color;
 	background-color: @entryselbg-color;
