@@ -177,6 +177,15 @@ column-header .button * {
 	background: none;
 }
 
+column-header .button {
+	border-color: shade(@background-color, 0.9);
+	background: -gtk-gradient(radial, center bottom, 0.28,
+	                                  center center, 1.0, 
+	                                  color-stop(0.00, shade(@background-color, 1.3)),
+	                                  color-stop(0.16, shade(@background-color, 1.1)),
+	                                  color-stop(1.00, @background-color));
+}
+
 .viewport {
 	/* Members: GtkViewport. */
 }
@@ -376,7 +385,7 @@ GtkFrame
 .button:focus > *
 {
 	background: alpha(shade(@entryselbg-color, 0.5), 0.4);
-	border: 1px solid shade(@entryselbg-color, 0.9);
+	box-shadow: inset 0 0 0 1px shade(@entryselbg-color, 0.9);
 	color: @entryselfg-color !important;
 }
 
@@ -472,7 +481,7 @@ GtkTextView, .entry {
 }
 
 GtkTextView:focused, .entry:focused {
-	border: 1px solid shade(@entryselbg-color, 0.7);
+	box-shadow: inset 0 0 0 2px shade(@entryselbg-color, 0.7);
 }
 
 .entry:insensitive {
@@ -498,6 +507,11 @@ GtkComboBox * {
 }
 
 GtkComboBox .menuitem:hover * {
+	color: @entryselfg-color;
+}
+
+GtkSwitch.trough:active {
+	background: @entryselbg-color;
 	color: @entryselfg-color;
 }
 
@@ -539,4 +553,3 @@ GtkComboBox .menuitem:hover * {
 @import url("widgets/gtkentry.css");
 @import url("widgets/gtkbutton.css");
 @import url("widgets/gtkstatusbar.css");
-
