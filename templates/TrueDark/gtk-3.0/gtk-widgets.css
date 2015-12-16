@@ -288,6 +288,10 @@ GtkFrame
 	/* Members: GtkToolbar. */
 }
 
+.toolbar .separator {
+	color: shade(@entryselbg-color, 0.7);
+}
+
 .toolbar .button * {
 	background: none;
 }
