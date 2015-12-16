@@ -235,7 +235,7 @@ GtkFrame
 
 .notebook tab {
 	border-top: 1px solid shade(@background-color,1.5);
-	padding: 3px 2px;
+	padding: 5px 8px;
 }
 
 .notebook tab.top, .notebook tab.bottom {
@@ -296,7 +296,7 @@ GtkFrame
 	/* Members: GtkHandleBox. */
 }
 
-.button, .slider, .notebook tab:active {
+.button, .slider {
 	border: 1px solid shade(@background-color,3.6);
 	padding: 4px 3px;
 	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@background-color,1.2)), 
@@ -325,16 +325,32 @@ GtkFrame
 	color: @entryselfg-color;
 }
 
+.notebook tab:active {
+	border: 1px solid shade(@background-color,3.6);
+	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@background-color,1.2)), 
+												color-stop(0.50,shade(@background-color,1.5)), 
+												color-stop(0.51,shade(@background-color,1.2)), 
+												color-stop(1.00,shade(@background-color,1.3)));
+}
+
 .notebook tab.top:active {
+	border-right: 1px solid shade(@background-color, 0.8);
+	border-left:  1px solid shade(@background-color, 0.8);
 	border-bottom: none;
 }
 .notebook tab.left:active {
+	border-top: 1px solid shade(@background-color, 0.8);
+	border-bottom:  1px solid shade(@background-color, 0.8);
 	border-right: none;
 }
 .notebook tab.bottom:active {
+	border-right: 1px solid shade(@background-color, 0.8);
+	border-left:  1px solid shade(@background-color, 0.8);
 	border-top: none;
 }
 .notebook tab.right:active {
+	border-top: 1px solid shade(@background-color, 0.8);
+	border-bottom:  1px solid shade(@background-color, 0.8);
 	border-left: none;
 }
 
