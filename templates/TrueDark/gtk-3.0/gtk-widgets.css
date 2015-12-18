@@ -534,13 +534,21 @@ GtkTextView:selected, .entry:selected
     background-size: 40px 200%;
 }
 
-.cell
-row:selected,
+row:selected
+{
+	color: @entryselfg-color;
+	background: -gtk-gradient(linear, 0 0, 0 1, 
+	                color-stop(0.0, shade(@entryselbg-color, 0.9)),
+	                color-stop(1.0, shade(@entryselbg-color, 0.6)));
+}
+
 row:active,
 row:selected:focused
 {
 	color: @entryselfg-color;
-	background-color: @entryselbg-color;
+	background: -gtk-gradient(linear, 0 0, 0 1, 
+	                color-stop(0.0, shade(@entryselbg-color, 1.2)),
+	                color-stop(1.0, shade(@entryselbg-color, 0.9)));
 }
 
 .menu .menuitem:hover > GtkLabel
