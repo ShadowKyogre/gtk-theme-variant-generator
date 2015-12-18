@@ -214,8 +214,6 @@ column-header .button {
 }
 
 .slider {
-	trough-border: 1;
-	slider-width: 9;
 	background: -gtk-gradient(linear, 0 0, 0 1,
 	                color-stop(0.0,shade(@background-color,1.2)),
 	                color-stop(0.50,shade(@background-color,1.5)),
@@ -299,18 +297,45 @@ GtkFrame
 
 .trough {
 	/* Members: GtkProgressBar, GtkScale, GtkScrollbar, GtkSwitch. */
-	background:shade(@background-color, 0.75);
+	background: shade(@background-color, 0.75);
 	border: 1px solid shade(@background-color, 0.5);
 	margin: 5px;
 	border-radius: 4px;
 }
 
-.scale.trough.highlight.left, .scale.trough.highlight.right,
-.scale.trough.vertical.highlight.bottom, .scale.trough.vertical.highlight.top
+.scale.trough.highlight.left, 
+.scale.trough.highlight.right, 
+.scale.trough.vertical.highlight.top,
+.scale.trough.vertical.highlight.bottom 
 {
 	background: @entryselbg-color;
-	box-shadow: inset 0 0 0 1px shade(@entryselbg-color, 1.2);
-	border: 1px solid shade(@entryselbg-color, 0.7);
+	box-shadow: inset 0 0 0 6px shade(@entryselbg-color, 1.2),
+	            inset 0 0 0 5px shade(@entryselbg-color, 0.7),
+	            inset 0 0 0 4px @background-color;
+}
+
+.scale .trough {
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 5px @background-color;
+	border: 1px solid @background-color;
+	margin: 0px;
+}
+
+.scale:focus .trough {
+	border: 1px solid @entryselbg-color;
+	box-shadow: inset 0 0 0 5px mix(@entryselbg-color, @background-color, 0.8);
+	background: mix(@entryselbg-color, @background-color, 0.8);
+}
+
+.scale:focus.trough.highlight.left, 
+.scale:focus.trough.highlight.right, 
+.scale:focus.trough.vertical.highlight.top,
+.scale:focus.trough.vertical.highlight.bottom 
+{
+	background: @entryselbg-color;
+	box-shadow: inset 0 0 0 6px shade(@entryselbg-color, 1.2),
+	            inset 0 0 0 5px shade(@entryselbg-color, 0.7),
+	            inset 0 0 0 4px mix(@entryselbg-color, @background-color, 0.8);
 }
 
 .background {
@@ -352,11 +377,10 @@ GtkFrame
 {
 	background: alpha(shade(@entryselbg-color, 0.5), 0.4);
 	box-shadow: inset 0 0 0 1px shade(@entryselbg-color, 0.9);
-	color: @entryselfg-color !important;
+	color: @entryselfg-color;
 }
 
 .button:hover {
-	border-color: 1px solid green;
 	box-shadow: inset 0 0 0 1px shade(@background-color, 5.4);
 	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@background-color, 1.7)),
 	                color-stop(0.50,shade(@background-color,2.0)),
@@ -494,8 +518,8 @@ GtkLinkButton * {
 	padding: 1px 2px;
 }
 
-GtkLinkButton {
-	background: @background-color !important;
+GtkLinkButton.button {
+	background: @background-color;
 	box-shadow: none;
 	border-color: rgba(0, 0, 0, 0);
 }
@@ -582,13 +606,13 @@ row:selected:focused
 
 .menu .menuitem:hover > GtkLabel
 {
-	background-color: none;
+	background: none;
 	color: @entryselfg-color;
 }
 
 .menu >.menubar.menuitem:hover,
 .menubar >.menuitem:hover > GtkLabel {
-	background-color: none;
+	background: none;
 	color: @entryselfg-color;
 	transition: 150ms ease-in-out;
 }
@@ -633,13 +657,31 @@ GtkComboBox .menuitem:hover * {
 
 GtkSwitch.trough {
 	border-radius: 0px;
-	trough-border: 0;
+}
+
+GtkSwitch.slider:focus {
+	box-shadow: inset 0px 0px 0 10px alpha(@entryselbg-color, 0.2),
+	            inset 0px 0px 0 1px @entryselbg-color;
 }
 
 GtkSwitch.trough:active {
 	background: @entryselbg-color;
 	color: @entryselfg-color;
 	box-shadow: inset 0 0 4px 2px shade(@entryselbg-color, 0.7);
+}
+
+GtkSpinButton.button {
+	padding: 4px 4px;
+}
+
+GtkRadioButton > GtkLabel, GtkCheckButton > GtkLabel {
+	padding: 2px 2px;
+}
+
+GtkRadioButton:focus > GtkLabel, GtkCheckButton:focus > GtkLabel {
+	background: alpha(@entryselbg-color, 0.3);
+	box-shadow: inset 0 0 0 1px @entryselbg-color;
+	border-radius: 4px;
 }
 
 /*
