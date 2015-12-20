@@ -22,6 +22,8 @@
 	-GtkIMHtml-hyperlink-color: @link-color;
 	-GtkWidget-link-color: @link-color;
 	-GtkWidget-visited-link-color: @link-color;
+	-GtkProgressBar-min-vertical-bar-width: 24px;
+	-GtkProgressBar-min-horizontal-bar-height: 24px;
 }
 
 *:insensitive{
@@ -526,19 +528,38 @@ GtkLinkButton.button {
 
 .progressbar {
 	/* Members: GtkProgressBar, GtkCellRendererProgress. */
-	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@entryselbg-color,1.0)),
-	                color-stop(0.50,shade(@entryselbg-color,1.1)),
-	                color-stop(0.51,shade(@entryselbg-color,1.4)),
-	                color-stop(1.00,shade(@entryselbg-color,1.0)));
-	border-radius: 4px;
+	background: -gtk-gradient(linear, 0 0, 0 0.5, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
+	                color-stop(0.50,alpha(shade(@entryselbg-color,1.7), 0.5)),
+	                color-stop(0.51,alpha(shade(@entryselbg-color,2.0), 0.5)),
+	                color-stop(0.52, rgba(0, 0, 0, 0))),
+
+	            -gtk-gradient(linear, 0 0, 1 1,
+	                color-stop(0.0, @entryselbg-color),
+	                color-stop(0.25, @entryselbg-color), color-stop(0.26, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
+	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
+	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
+	box-shadow: inset 0 0 0 2px alpha(shade(@entryselbg-color, 4.8), 0.4),
+	            inset 0 0 0 1px alpha(shade(@entryselbg-color, 0.5), 1.0);
 	border: 1px solid shade(@background-color, 0.5);
+	background-repeat: repeat-x;
+	background-size: 40px 200%;
 	color: @entryselfg-color;
 }
 .progressbar.vertical {
-	background: -gtk-gradient(linear, 0 0, 1 0, color-stop(0.0,shade(@entryselbg-color,1.0)),
-	                color-stop(0.50,shade(@entryselbg-color,1.1)),
-	                color-stop(0.51,shade(@entryselbg-color,1.4)),
-	                color-stop(1.00,shade(@entryselbg-color,1.0)));
+	background: -gtk-gradient(linear, 0 0, 0.5 0, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
+	                color-stop(0.50,alpha(shade(@entryselbg-color,1.7), 0.5)),
+	                color-stop(0.51,alpha(shade(@entryselbg-color,2.0), 0.5)),
+	                color-stop(0.52, rgba(0, 0, 0, 0))),
+
+	            -gtk-gradient(linear, 0 0, 1 1,
+	                color-stop(0.0, @entryselbg-color),
+	                color-stop(0.25, @entryselbg-color), color-stop(0.26, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
+	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
+	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
+	background-repeat: repeat-y;
+	background-size: 200% 40px;
 }
 
 .arrow {
@@ -682,6 +703,11 @@ GtkRadioButton:focus > GtkLabel, GtkCheckButton:focus > GtkLabel {
 	background: alpha(@entryselbg-color, 0.3);
 	box-shadow: inset 0 0 0 1px @entryselbg-color;
 	border-radius: 4px;
+}
+
+GtkColorSwatch
+{
+background: none;
 }
 
 /*
