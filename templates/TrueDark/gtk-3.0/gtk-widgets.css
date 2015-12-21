@@ -340,6 +340,44 @@ GtkFrame
 	            inset 0 0 0 4px mix(@entryselbg-color, @background-color, 0.8);
 }
 
+GtkLevelBar {
+	-GtkLevelBar-min-block-width: 10;
+	-GtkLevelBar-min-block-height: 10;
+}
+
+GtkLevelBar.vertical {
+	-GtkLevelBar-min-block-width: 10;
+	-GtkLevelBar-min-block-height: 10;
+}
+
+.level-bar.trough
+{
+	background: none;
+	border: none;
+	margin: 0px;
+}
+
+.level-bar.indicator-discrete.fill-block.horizontal {
+	margin: 2px 2px;
+}
+
+.level-bar.indicator-discrete.fill-block.vertical {
+	margin: 2px 2px;
+}
+
+.level-bar.indicator-continuous.fill-block {
+	background: @entryselbg-color;
+}
+
+.level-bar.indicator-discrete.fill-block {
+	background: @entryselbg-color;
+	border: 1px solid shade(@entryselbg-color, 0.3);
+}
+
+.level-bar.fill-block.empty-fill-block {
+	background: shade(@entryselbg-color, 0.5);
+}
+
 .background {
 	/* Members: GtkWindow. */
 }
