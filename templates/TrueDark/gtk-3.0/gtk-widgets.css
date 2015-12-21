@@ -74,69 +74,71 @@ GtkImage, .button *
 /* Members: GtkSpinner. */
 
 @keyframes spinner {
-0.00% {background-image: url('assets/spin/tmp-0.gif')}
-3.45% {background-image: url('assets/spin/tmp-1.gif')}
-6.90% {background-image: url('assets/spin/tmp-2.gif')}
-10.34% {background-image: url('assets/spin/tmp-3.gif')}
-13.79% {background-image: url('assets/spin/tmp-4.gif')}
-17.24% {background-image: url('assets/spin/tmp-5.gif')}
-20.69% {background-image: url('assets/spin/tmp-6.gif')}
-24.14% {background-image: url('assets/spin/tmp-7.gif')}
-27.59% {background-image: url('assets/spin/tmp-8.gif')}
-31.03% {background-image: url('assets/spin/tmp-9.gif')}
-34.48% {background-image: url('assets/spin/tmp-10.gif')}
-37.93% {background-image: url('assets/spin/tmp-11.gif')}
-41.38% {background-image: url('assets/spin/tmp-12.gif')}
-44.83% {background-image: url('assets/spin/tmp-13.gif')}
-48.28% {background-image: url('assets/spin/tmp-14.gif')}
-51.72% {background-image: url('assets/spin/tmp-15.gif')}
-55.17% {background-image: url('assets/spin/tmp-16.gif')}
-58.62% {background-image: url('assets/spin/tmp-17.gif')}
-62.07% {background-image: url('assets/spin/tmp-18.gif')}
-65.52% {background-image: url('assets/spin/tmp-19.gif')}
-68.97% {background-image: url('assets/spin/tmp-20.gif')}
-72.41% {background-image: url('assets/spin/tmp-21.gif')}
-75.86% {background-image: url('assets/spin/tmp-22.gif')}
-79.31% {background-image: url('assets/spin/tmp-23.gif')}
-82.76% {background-image: url('assets/spin/tmp-24.gif')}
-86.21% {background-image: url('assets/spin/tmp-25.gif')}
-89.66% {background-image: url('assets/spin/tmp-26.gif')}
-93.10% {background-image: url('assets/spin/tmp-27.gif')}
-96.55% {background-image: url('assets/spin/tmp-28.gif')}
-100.00% {background-image: url('assets/spin/tmp-0.gif')}
+/* 0.00% {-gtk-icon-source: url('assets/spin/tmp-0.gif')}
+3.45% {-gtk-icon-source: url('assets/spin/tmp-1.gif')}
+6.90% {-gtk-icon-source: url('assets/spin/tmp-2.gif')}
+10.34% {-gtk-icon-source: url('assets/spin/tmp-3.gif')}
+13.79% {-gtk-icon-source: url('assets/spin/tmp-4.gif')}
+17.24% {-gtk-icon-source: url('assets/spin/tmp-5.gif')}
+20.69% {-gtk-icon-source: url('assets/spin/tmp-6.gif')}
+24.14% {-gtk-icon-source: url('assets/spin/tmp-7.gif')}
+27.59% {-gtk-icon-source: url('assets/spin/tmp-8.gif')}
+31.03% {-gtk-icon-source: url('assets/spin/tmp-9.gif')}
+34.48% {-gtk-icon-source: url('assets/spin/tmp-10.gif')}
+37.93% {-gtk-icon-source: url('assets/spin/tmp-11.gif')}
+41.38% {-gtk-icon-source: url('assets/spin/tmp-12.gif')}
+44.83% {-gtk-icon-source: url('assets/spin/tmp-13.gif')}
+48.28% {-gtk-icon-source: url('assets/spin/tmp-14.gif')}
+51.72% {-gtk-icon-source: url('assets/spin/tmp-15.gif')}
+55.17% {-gtk-icon-source: url('assets/spin/tmp-16.gif')}
+58.62% {-gtk-icon-source: url('assets/spin/tmp-17.gif')}
+62.07% {-gtk-icon-source: url('assets/spin/tmp-18.gif')}
+65.52% {-gtk-icon-source: url('assets/spin/tmp-19.gif')}
+68.97% {-gtk-icon-source: url('assets/spin/tmp-20.gif')}
+72.41% {-gtk-icon-source: url('assets/spin/tmp-21.gif')}
+75.86% {-gtk-icon-source: url('assets/spin/tmp-22.gif')}
+79.31% {-gtk-icon-source: url('assets/spin/tmp-23.gif')}
+82.76% {-gtk-icon-source: url('assets/spin/tmp-24.gif')}
+86.21% {-gtk-icon-source: url('assets/spin/tmp-25.gif')}
+89.66% {-gtk-icon-source: url('assets/spin/tmp-26.gif')}
+93.10% {-gtk-icon-source: url('assets/spin/tmp-27.gif')}
+96.55% {-gtk-icon-source: url('assets/spin/tmp-28.gif')}
+100.00% {-gtk-icon-source: url('assets/spin/tmp-0.gif')} */
+to { -gtk-icon-transform: rotate(1turn); }
 }
 
 @keyframes ispinner {
-0.00% {background-image: url('assets/ispin/tmp-0.gif')}
-3.45% {background-image: url('assets/ispin/tmp-1.gif')}
-6.90% {background-image: url('assets/ispin/tmp-2.gif')}
-10.34% {background-image: url('assets/ispin/tmp-3.gif')}
-13.79% {background-image: url('assets/ispin/tmp-4.gif')}
-17.24% {background-image: url('assets/ispin/tmp-5.gif')}
-20.69% {background-image: url('assets/ispin/tmp-6.gif')}
-24.14% {background-image: url('assets/ispin/tmp-7.gif')}
-27.59% {background-image: url('assets/ispin/tmp-8.gif')}
-31.03% {background-image: url('assets/ispin/tmp-9.gif')}
-34.48% {background-image: url('assets/ispin/tmp-10.gif')}
-37.93% {background-image: url('assets/ispin/tmp-11.gif')}
-41.38% {background-image: url('assets/ispin/tmp-12.gif')}
-44.83% {background-image: url('assets/ispin/tmp-13.gif')}
-48.28% {background-image: url('assets/ispin/tmp-14.gif')}
-51.72% {background-image: url('assets/ispin/tmp-15.gif')}
-55.17% {background-image: url('assets/ispin/tmp-16.gif')}
-58.62% {background-image: url('assets/ispin/tmp-17.gif')}
-62.07% {background-image: url('assets/ispin/tmp-18.gif')}
-65.52% {background-image: url('assets/ispin/tmp-19.gif')}
-68.97% {background-image: url('assets/ispin/tmp-20.gif')}
-72.41% {background-image: url('assets/ispin/tmp-21.gif')}
-75.86% {background-image: url('assets/ispin/tmp-22.gif')}
-79.31% {background-image: url('assets/ispin/tmp-23.gif')}
-82.76% {background-image: url('assets/ispin/tmp-24.gif')}
-86.21% {background-image: url('assets/ispin/tmp-25.gif')}
-89.66% {background-image: url('assets/ispin/tmp-26.gif')}
-93.10% {background-image: url('assets/ispin/tmp-27.gif')}
-96.55% {background-image: url('assets/ispin/tmp-28.gif')}
-100.00% {background-image: url('assets/ispin/tmp-0.gif')}
+/* 0.00% {-gtk-icon-source: url('assets/ispin/tmp-0.gif')}
+3.45% {-gtk-icon-source: url('assets/ispin/tmp-1.gif')}
+6.90% {-gtk-icon-source: url('assets/ispin/tmp-2.gif')}
+10.34% {-gtk-icon-source: url('assets/ispin/tmp-3.gif')}
+13.79% {-gtk-icon-source: url('assets/ispin/tmp-4.gif')}
+17.24% {-gtk-icon-source: url('assets/ispin/tmp-5.gif')}
+20.69% {-gtk-icon-source: url('assets/ispin/tmp-6.gif')}
+24.14% {-gtk-icon-source: url('assets/ispin/tmp-7.gif')}
+27.59% {-gtk-icon-source: url('assets/ispin/tmp-8.gif')}
+31.03% {-gtk-icon-source: url('assets/ispin/tmp-9.gif')}
+34.48% {-gtk-icon-source: url('assets/ispin/tmp-10.gif')}
+37.93% {-gtk-icon-source: url('assets/ispin/tmp-11.gif')}
+41.38% {-gtk-icon-source: url('assets/ispin/tmp-12.gif')}
+44.83% {-gtk-icon-source: url('assets/ispin/tmp-13.gif')}
+48.28% {-gtk-icon-source: url('assets/ispin/tmp-14.gif')}
+51.72% {-gtk-icon-source: url('assets/ispin/tmp-15.gif')}
+55.17% {-gtk-icon-source: url('assets/ispin/tmp-16.gif')}
+58.62% {-gtk-icon-source: url('assets/ispin/tmp-17.gif')}
+62.07% {-gtk-icon-source: url('assets/ispin/tmp-18.gif')}
+65.52% {-gtk-icon-source: url('assets/ispin/tmp-19.gif')}
+68.97% {-gtk-icon-source: url('assets/ispin/tmp-20.gif')}
+72.41% {-gtk-icon-source: url('assets/ispin/tmp-21.gif')}
+75.86% {-gtk-icon-source: url('assets/ispin/tmp-22.gif')}
+79.31% {-gtk-icon-source: url('assets/ispin/tmp-23.gif')}
+82.76% {-gtk-icon-source: url('assets/ispin/tmp-24.gif')}
+86.21% {-gtk-icon-source: url('assets/ispin/tmp-25.gif')}
+89.66% {-gtk-icon-source: url('assets/ispin/tmp-26.gif')}
+93.10% {-gtk-icon-source: url('assets/ispin/tmp-27.gif')}
+96.55% {-gtk-icon-source: url('assets/ispin/tmp-28.gif')}
+100.00% {-gtk-icon-source: url('assets/ispin/tmp-0.gif')} */
+to { -gtk-icon-transform: rotate(1turn); }
 }
 
 .spinner:active {
@@ -144,18 +146,18 @@ GtkImage, .button *
 }
 
 .spinner:active:insensitive {
-	animation: ispinner 1s infinite linear;
+	/*animation: ispinner 1s infinite linear;*/
+	opacity: 0.5;
 }
 
 .spinner {
 	background-color: transparent;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-image: url('assets/spin.gif');
+	/* -gtk-icon-source: url('assets/spin.gif'); */
+	-gtk-icon-source: -gtk-icontheme("process-working-symbolic");
 }
 
 .spinner:insensitive {
-	background-image: url('assets/ispin.gif');
+	/* -gtk-icon-source: url('assets/ispin.gif'); */
 }
 
 
