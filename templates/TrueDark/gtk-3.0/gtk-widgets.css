@@ -707,7 +707,11 @@ GtkRadioButton:focus > GtkLabel, GtkCheckButton:focus > GtkLabel {
 
 GtkColorSwatch
 {
-background: none;
+	background: none;
+}
+
+GtkScrolledWindow {
+	background: none;
 }
 
 /*
