@@ -700,8 +700,9 @@ GtkTextView:focused, .entry:focused {
 	/* Members: GtkExpander. */
 }
 
+
 GtkComboBox .button * {
-	background: none;
+	background: inherit;
 }
 
 GtkComboBox *:insensitive {
