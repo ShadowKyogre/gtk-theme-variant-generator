@@ -56,10 +56,11 @@ frame label {
 	/* Members: GtkCalendar. */
 }
 
-radio:checked, check:checked {
+radio:checked, check:checked, radio:indeterminate, check:indeterminate {
 	background: @entryselbg-color;
 	color: @entryselfg-color;
 }
+
 
 radio, check {
 	background: @entrybg-color;
@@ -73,7 +74,7 @@ radio {
 	border-radius: 20px;
 }
 
-radio:checked  {
+radio:checked, radio:indeterminate {
 	box-shadow: inset 0px 0px 1px 1px shade(@background-color, 0.8);
 	border:none;
 	margin: 1px;
