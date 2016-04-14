@@ -411,8 +411,14 @@ levelbar block.empty {
 	/* Members: GtkToolbar. */
 }
 
+separator.horizontal, separator.vertical {
+	background: shade(@background-color, 0.5);
+}
+
 toolbar separator {
-	color: shade(@entryselbg-color, 0.7);
+	border-right: 1px solid shade(@entryselbg-color, 0.7);
+	background-clip: padding-box;
+	margin: 4px;
 }
 
 toolbar button * {
