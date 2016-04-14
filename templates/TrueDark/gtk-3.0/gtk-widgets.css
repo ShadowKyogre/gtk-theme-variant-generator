@@ -68,6 +68,15 @@ radio, check {
 	/* .check Members: GtkCheckMenuItem, GtkCellRendererToggle, GtkCheckButton. */
 }
 
+radio {
+	border-radius: 20px;
+}
+
+treeview.view check:checked:selected, check:checked {
+	/* workaround until this is fixed upstream */
+	-gtk-icon-source: none;
+}
+
 menuitem radio, menuitem check {
 	min-height: 16px;
 	min-width: 16px;
