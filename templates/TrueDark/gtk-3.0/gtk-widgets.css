@@ -727,6 +727,10 @@ menubar > menuitem:hover > label {
 	transition: 150ms ease-in-out;
 }
 
+menuitem label, menubar label {
+	border: none;
+}
+
 textview.text, entry {
 	/* Members: GtkEntry. */
 	color: @entryfg-color;
