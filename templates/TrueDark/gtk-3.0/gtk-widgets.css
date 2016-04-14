@@ -705,8 +705,8 @@ menu menuitem:hover > image
 	color: @entryselfg-color;
 }
 
-menu >menubar>menuitem:hover,
-menubar >menuitem:hover > label {
+menu > menubar > menuitem:hover,
+menubar > menuitem:hover > label {
 	background: none;
 	color: @entryselfg-color;
 	transition: 150ms ease-in-out;
