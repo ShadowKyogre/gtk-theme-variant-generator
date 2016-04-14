@@ -858,6 +858,10 @@ scrolledwindow overshoot
 	background: none;
 }
 
+stackswitcher button {
+	padding: 4px 8px;
+}
+
 /*
  * Imports for widget-specific theming.
  */
