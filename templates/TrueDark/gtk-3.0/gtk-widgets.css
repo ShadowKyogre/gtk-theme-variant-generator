@@ -367,41 +367,39 @@ scale:focus highlight
 	            inset 0 0 0 4px mix(@entryselbg-color, @background-color, 0.8);
 }
 
-levelbar {
-	-GtkLevelBar-min-block-width: 10;
-	-GtkLevelBar-min-block-height: 10;
-}
-
-levelbar.vertical {
-	-GtkLevelBar-min-block-width: 10;
-	-GtkLevelBar-min-block-height: 10;
-}
-
-levelbar.trough
+levelbar trough
 {
 	background: none;
 	border: none;
 	margin: 0px;
 }
 
-levelbar.indicator-discrete.fill-block.horizontal {
+levelbar.horizontal trough block {
+	padding: 5px 0px;
+}
+
+levelbar.vertical trough block {
+	padding: 5px 0px;
+}
+
+levelbar.discrete.horizontal block {
 	margin: 2px 2px;
 }
 
-levelbar.indicator-discrete.fill-block.vertical {
+levelbar.discrete.vertical block {
 	margin: 2px 2px;
 }
 
-levelbar.indicator-continuous.fill-block {
+levelbar.continuous block {
 	background: @entryselbg-color;
 }
 
-levelbar.indicator-discrete.fill-block {
+levelbar.discrete block {
 	background: @entryselbg-color;
 	border: 1px solid shade(@entryselbg-color, 0.3);
 }
 
-levelbar.fill-block.empty-fill-block {
+levelbar block.empty {
 	background: shade(@entryselbg-color, 0.5);
 }
 
