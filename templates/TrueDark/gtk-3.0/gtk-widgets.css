@@ -18,11 +18,12 @@
 {
 	background-color: @background-color;
 	color: @foreground-color;
-	-GtkHTML-link-color: @link-color;
-	-GtkIMHtml-hyperlink-color: @link-color;
-	-GtkWidget-link-color: @link-color;
-	-GtkWidget-visited-link-color: @link-color;
 }
+
+:link {
+	color: @link-color;
+}
+
 
 *:disabled{
 	/*background-color: shade(@background-color,0.85);*/
