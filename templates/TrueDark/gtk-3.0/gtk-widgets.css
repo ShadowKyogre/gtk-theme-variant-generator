@@ -266,7 +266,7 @@ notebook tab {
 	padding: 5px 8px;
 }
 
-notebook tab.top {
+notebook header.top tab {
 	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,shade(@background-color,0.7)),
 	                color-stop(0.50,shade(@background-color,0.8)),
 	                color-stop(0.51,shade(@background-color,1.0)),
@@ -276,7 +276,7 @@ notebook tab.top {
 	border-bottom:none;
 }
 
-notebook tab.bottom {
+notebook header.bottom tab {
 	background: -gtk-gradient(linear, 0 1, 0 0, color-stop(0.0,shade(@background-color,0.7)),
 	                color-stop(0.50,shade(@background-color,0.8)),
 	                color-stop(0.51,shade(@background-color,1.0)),
@@ -286,7 +286,7 @@ notebook tab.bottom {
 	border-top:none;
 }
 
-notebook tab.left {
+notebook header.left tab {
 	background: -gtk-gradient(linear, 0 1, 0 0, color-stop(0.0,shade(@background-color,0.7)),
 	                color-stop(0.50,shade(@background-color,0.8)),
 	                color-stop(0.51,shade(@background-color,1.0)),
@@ -296,7 +296,7 @@ notebook tab.left {
 	border-right:none;
 }
 
-notebook tab.right {
+notebook header.right tab {
 	background: -gtk-gradient(linear, 0 0, 1 0, color-stop(0.0,shade(@background-color,0.7)),
 	                color-stop(0.50,shade(@background-color,0.8)),
 	                color-stop(0.51,shade(@background-color,1.0)),
@@ -517,7 +517,7 @@ notebook tab:checked {
 	padding: 7px 10px;
 }
 
-notebook tab.top:checked {
+notebook header.top tab:checked {
 	border-right:  1px solid shade(@background-color, 0.8);
 	border-left:   1px solid shade(@background-color, 0.8);
 	border-bottom: none;
@@ -529,7 +529,7 @@ notebook tab.top:checked {
 	            inset 0 -1px 0 0 @background-color;
 }
 
-notebook tab.left:checked {
+notebook header.left tab:checked {
 	border-top:    1px solid shade(@background-color, 0.8);
 	border-bottom: 1px solid shade(@background-color, 0.8);
 	border-right:  none;
@@ -541,7 +541,7 @@ notebook tab.left:checked {
 	            inset -1px 0 0 0 @background-color;
 }
 
-notebook tab.bottom:checked {
+notebook header.bottom tab:checked {
 	border-right: 1px solid shade(@background-color, 0.8);
 	border-left:  1px solid shade(@background-color, 0.8);
 	border-top:   none;
@@ -553,7 +553,7 @@ notebook tab.bottom:checked {
 	            inset 0 1px 0 0 @background-color;
 }
 
-notebook tab.right:checked {
+notebook header.right tab:checked {
 	border-top:    1px solid shade(@background-color, 0.8);
 	border-bottom: 1px solid shade(@background-color, 0.8);
 	border-left:   none;
