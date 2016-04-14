@@ -29,9 +29,13 @@
 	color: shade(@foreground-color,0.5);
 }
 
-GtkImage, button *
+image, button *
 {
 	background: none;
+}
+
+image {
+	border: none;
 }
 
 .accelerator {
