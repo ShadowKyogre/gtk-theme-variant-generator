@@ -681,7 +681,8 @@ menu menuitem:hover, menubar>menuitem:hover, menubar menuitem:hover
     background-size: 40px 200%;
 }
 
-treeview.view:selected
+treeview.view:selected,
+.sidebar-row:selected *
 {
 	color: @entryselfg-color;
 	background: -gtk-gradient(linear, 0 0, 0 1, 
@@ -690,7 +691,8 @@ treeview.view:selected
 }
 
 treeview.view:active,
-treeview.view:selected:focus
+treeview.view:selected:focus,
+.sidebar-row:selected:focus *
 {
 	color: @entryselfg-color;
 	background: -gtk-gradient(linear, 0 0, 0 1, 
