@@ -88,7 +88,7 @@ if __name__ == "__main__":
 	                     default='{0}{1}',
 	                     help='Directory name format for variants')
 	aparser.add_argument('--readable-format', '-r',
-	                     default=r'{0} \2',
+	                     default=r'{0}\2',
 	                     help='Readable name format for variants')
 	aparser.add_argument('--config-file',  '-c',
 	                     default=path.join(path.dirname(__file__), 'variants.conf'),
