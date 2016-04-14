@@ -22,8 +22,6 @@
 	-GtkIMHtml-hyperlink-color: @link-color;
 	-GtkWidget-link-color: @link-color;
 	-GtkWidget-visited-link-color: @link-color;
-	-GtkProgressBar-min-vertical-bar-width: 24px;
-	-GtkProgressBar-min-horizontal-bar-height: 24px;
 }
 
 *:disabled{
@@ -64,6 +62,11 @@ radio, check {
 	border: 1px solid shade(@background-color, 0.8);
 	/* .radio Members: GtkCellRendererToggle, GtkRadioMenuItem, GtkRadioButton. */
 	/* .check Members: GtkCheckMenuItem, GtkCellRendererToggle, GtkCheckButton. */
+}
+
+menuitem radio, menuitem check {
+	min-height: 16px;
+	min-width: 16px;
 }
 
 check:disabled, radio:disabled {
@@ -598,7 +601,7 @@ button.link {
 	border-color: rgba(0, 0, 0, 0);
 }
 
-progressbar trough {
+progressbar progress {
 	/* Members: GtkProgressBar, GtkCellRendererProgress. */
 	background: -gtk-gradient(linear, 0 0, 0 0.5, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
 	                color-stop(0.50,alpha(shade(@entryselbg-color,1.7), 0.5)),
@@ -617,9 +620,14 @@ progressbar trough {
 	background-repeat: repeat-x;
 	background-size: 40px 200%;
 	color: @entryselfg-color;
+	min-height: 24px;
 }
 
-progressbar.vertical trough {
+progressbar.horizontal trough {
+	min-height: 24px;
+}
+
+progressbar.vertical progress {
 	background: -gtk-gradient(linear, 0 0, 0.5 0, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
 	                color-stop(0.50,alpha(shade(@entryselbg-color,1.7), 0.5)),
 	                color-stop(0.51,alpha(shade(@entryselbg-color,2.0), 0.5)),
@@ -633,6 +641,11 @@ progressbar.vertical trough {
 	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
 	background-repeat: repeat-y;
 	background-size: 200% 40px;
+	min-width: 24px;
+}
+
+progressbar.vertical trough {
+	min-width: 24px;
 }
 
 .arrow {
