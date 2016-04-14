@@ -731,7 +731,7 @@ menuitem label, menubar label {
 	border: none;
 }
 
-textview.text, entry {
+textview.view text, entry {
 	/* Members: GtkEntry. */
 	color: @entryfg-color;
 	background-color: @entrybg-color;
