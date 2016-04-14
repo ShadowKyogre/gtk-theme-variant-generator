@@ -641,6 +641,7 @@ progressbar progress {
 	background-size: 40px 200%;
 	color: @entryselfg-color;
 	min-height: 24px;
+	border-radius: 4px;
 }
 
 progressbar.horizontal trough {
@@ -662,6 +663,7 @@ progressbar.vertical progress {
 	background-repeat: repeat-y;
 	background-size: 200% 40px;
 	min-width: 24px;
+	border-radius: 4px;
 }
 
 progressbar.vertical trough {
