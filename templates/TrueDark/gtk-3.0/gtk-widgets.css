@@ -73,6 +73,12 @@ radio {
 	border-radius: 20px;
 }
 
+radio:checked  {
+	box-shadow: inset 0px 0px 1px 1px shade(@background-color, 0.8);
+	border:none;
+	margin: 1px;
+}
+
 treeview.view check:checked:selected, check:checked {
 	/* workaround until this is fixed upstream */
 	-gtk-icon-source: none;
