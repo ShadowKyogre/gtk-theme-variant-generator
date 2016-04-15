@@ -272,21 +272,44 @@ scrollbar slider {
 	border-radius: 0px;
 	border-color: shade(@entryselbg-color, 0.7);
 	box-shadow: inset 0 0 0 1px shade(@entryselbg-color, 2.0);
-	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,  shade(@entryselbg-color, 1.0)),
-	                color-stop(0.50, shade(@entryselbg-color, 1.5)),
-	                color-stop(0.50, shade(@entryselbg-color, 1.0)),
-	                color-stop(1.00, shade(@entryselbg-color, 1.0)));
+}
+
+scrollbar.vertical slider {
+	background: -gtk-gradient(linear, 0 0, 0.5 0, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
+	                color-stop(0.50,alpha(shade(@entryselbg-color,1.7), 0.5)),
+	                color-stop(0.51,alpha(shade(@entryselbg-color,2.0), 0.5)),
+	                color-stop(0.52, rgba(0, 0, 0, 0))),
+
+	            -gtk-gradient(linear, 0 0, 1 1,
+	                color-stop(0.0, @entryselbg-color),
+	                color-stop(0.25, @entryselbg-color), color-stop(0.26, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
+	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
+	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
+	background-repeat: repeat-y;
+	background-size: 200% 12px;
+	min-width: 4px;
+}
+
+scrollbar.horizontal slider {
+	background: -gtk-gradient(linear, 0 0, 0 0.5, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
+	                color-stop(0.50,alpha(shade(@entryselbg-color,1.7), 0.5)),
+	                color-stop(0.51,alpha(shade(@entryselbg-color,2.0), 0.5)),
+	                color-stop(0.52, rgba(0, 0, 0, 0))),
+
+	            -gtk-gradient(linear, 0 0, 1 1,
+	                color-stop(0.0, @entryselbg-color),
+	                color-stop(0.25, @entryselbg-color), color-stop(0.26, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
+	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
+	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
+	background-repeat:repeat-x;
+	background-size: 12px 200%;
+	min-height:4px;
 }
 
 scrollbar trough {
 	border-radius: 0px;
-}
-
-scrollbar.vertical slider {
-	background: -gtk-gradient(linear, 0 0, 1 0, color-stop(0.0, shade(@entryselbg-color, 1.0)),
-	                color-stop(0.50,shade(@entryselbg-color, 1.5)),
-	                color-stop(0.50,shade(@entryselbg-color, 1.0)),
-	                color-stop(1.00,shade(@entryselbg-color, 1.0)));
 }
 
 /*
