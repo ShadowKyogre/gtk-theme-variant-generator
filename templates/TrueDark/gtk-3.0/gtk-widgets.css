@@ -57,7 +57,13 @@ frame label {
 }
 
 radio:checked, check:checked, radio:indeterminate, check:indeterminate {
-	background: @entryselbg-color;
+	background: 
+	    -gtk-gradient(radial,
+	        center bottom, 0, 
+	        center center, 1,
+	        color-stop(1.0, rgba(0, 0, 0, 0)),
+	        color-stop(0.0, shade(@entryselbg-color, 1.6))),
+	    @entryselbg-color;
 	color: @entryselfg-color;
 }
 
@@ -65,19 +71,19 @@ radio:checked, check:checked, radio:indeterminate, check:indeterminate {
 radio, check {
 	background: @entrybg-color;
 	color: @entryfg-color;
-	border: 1px solid shade(@background-color, 0.8);
+	box-shadow: inset 0px 0px 1px 1px shade(@background-color, 0.8);
+	border:none;
+	margin: 1px;
 	/* .radio Members: GtkCellRendererToggle, GtkRadioMenuItem, GtkRadioButton. */
 	/* .check Members: GtkCheckMenuItem, GtkCellRendererToggle, GtkCheckButton. */
 }
 
-radio {
-	border-radius: 20px;
+check {
+	border-radius: 4px;
 }
 
-radio:checked, radio:indeterminate {
-	box-shadow: inset 0px 0px 1px 1px shade(@background-color, 0.8);
-	border:none;
-	margin: 1px;
+radio {
+	border-radius: 20px;
 }
 
 treeview.view check:checked:selected, check:checked {
