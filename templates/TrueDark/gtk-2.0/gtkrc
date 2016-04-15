@@ -80,7 +80,7 @@ style "default"
 	text[PRELIGHT]    = @text_color
 	text[ACTIVE]      = @selected_fg_color
 	text[SELECTED]    = @selected_fg_color
-	text[INSENSITIVE] = lighter (@base_color)
+	text[INSENSITIVE] = shade (0.5, @text_color)
 
     engine "murrine" {
         #options
