@@ -255,7 +255,16 @@ slider {
 	                color-stop(0.50,shade(@background-color,1.5)),
 	                color-stop(0.51,shade(@background-color,1.3)),
 	                color-stop(1.00,shade(@background-color,1.2)));
+	border-radius: 3px;
 	/* Members: GtkScale, GtkScrollbar. */
+}
+
+scale.vertical slider {
+	background: -gtk-gradient(linear, 0 0, 1 0,
+	                color-stop(0.0,shade(@background-color,1.2)),
+	                color-stop(0.50,shade(@background-color,1.5)),
+	                color-stop(0.51,shade(@background-color,1.3)),
+	                color-stop(1.00,shade(@background-color,1.2)));
 }
 
 scrollbar slider {
