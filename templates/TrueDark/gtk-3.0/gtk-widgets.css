@@ -840,7 +840,7 @@ entry.combo + button.combo arrow {
 	padding: 1px 1px;
 }
 
-switch.trough {
+switch.trough, switch slider {
 	border-radius: 0px;
 }
 
