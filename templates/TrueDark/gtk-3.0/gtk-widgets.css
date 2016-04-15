@@ -707,6 +707,7 @@ progressbar progress {
 	background-size: 40px 200%;
 	color: @entryselfg-color;
 	min-height: 24px;
+	min-width: 0px;
 	border-radius: 4px;
 }
 
@@ -729,6 +730,7 @@ progressbar.vertical progress {
 	background-repeat: repeat-y;
 	background-size: 200% 40px;
 	min-width: 24px;
+	min-height: 0px;
 	border-radius: 4px;
 }
 
