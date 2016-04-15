@@ -269,6 +269,7 @@ scale.vertical slider {
 
 scrollbar slider {
 	padding: 4px;
+	border-radius: 0px;
 	border-color: shade(@entryselbg-color, 0.7);
 	box-shadow: inset 0 0 0 1px shade(@entryselbg-color, 2.0);
 	background: -gtk-gradient(linear, 0 0, 0 1, color-stop(0.0,  shade(@entryselbg-color, 1.0)),
