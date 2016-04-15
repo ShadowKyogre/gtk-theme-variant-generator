@@ -82,7 +82,11 @@ radio:checked, radio:indeterminate {
 
 treeview.view check:checked:selected, check:checked {
 	/* workaround until this is fixed upstream */
-	-gtk-icon-source: none;
+	-gtk-icon-source: image(
+		-gtk-recolor(url("assets/checkmark-symbolic.svg")),
+		-gtk-recolor(url("assets/checkmark-symbolic.png"))
+	);
+	/* -gtk-icon-source: none; */
 }
 
 menuitem radio, menuitem check {
