@@ -818,7 +818,6 @@ combobox button.combo {
 }
 
 combobox entry.combo + button.combo {
-	padding: 10px;
 }
 
 combobox *:disabled {
@@ -834,15 +833,27 @@ combobox menuitem:hover * {
 	color: @entryselfg-color;
 }
 
-button.combo arrow {
-	background: @foreground-color;
-	padding: 1px 1px;
-	margin: 2px;
+button.combo:first-child arrow {
+	background: image(
+		-gtk-recolor(url("assets/combodrop-symbolic.svg")),
+		-gtk-recolor(url("assets/combodrop-symbolic.png"))
+	);
+	max-height: 8px;
+	min-width: 8px;
+	background-size: 100% 100%;
+	background-position: center;
 }
 
 entry.combo + button.combo arrow {
-	background:@foreground-color;
-	padding: 1px 1px;
+	background: image(
+		-gtk-recolor(url("assets/combodrop-symbolic.svg")),
+		-gtk-recolor(url("assets/combodrop-symbolic.png"))
+	);
+	min-height: 16px;
+	min-width: 12px;
+	background-size: 100% 100%;
+	background-position: center;
+	padding: 0px;
 }
 
 switch.trough, switch slider {
