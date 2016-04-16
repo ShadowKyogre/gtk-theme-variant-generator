@@ -95,6 +95,21 @@ treeview.view check:checked:selected, check:checked {
 	/* -gtk-icon-source: none; */
 }
 
+radio:checked {
+	-gtk-icon-source: image(
+		-gtk-recolor(url('assets/radio-symbolic.svg')),
+		-gtk-recolor(url('assets/radio-symbolic.png'))
+	);
+}
+
+radio:indeterminate, check:indeterminate {
+	-gtk-icon-source: image(
+		-gtk-recolor(url('assets/indeterminate-symbolic.svg')),
+		-gtk-recolor(url('assets/indeterminate-symbolic.png'))
+	);
+}
+
+
 menuitem radio, menuitem check {
 	min-height: 16px;
 	min-width: 16px;
@@ -726,7 +741,7 @@ progressbar.horizontal progress.left {
 	background-size: 40px 200%;
 }
 
-progressbar.horizontal progress.right {
+progressbar.horizontal progress.right, progressbar.horizontal progress.pulse {
 	background: -gtk-gradient(linear, 0 0, 0 0.5, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
 	                color-stop(0.50,alpha(shade(@entryselbg-color,1.7), 0.5)),
 	                color-stop(0.51,alpha(shade(@entryselbg-color,2.0), 0.5)),
@@ -878,7 +893,9 @@ menu menuitem:hover > image
 }
 
 menu > menubar > menuitem:hover,
-menubar > menuitem:hover > label {
+menubar > menuitem:hover > label,
+menuitem:hover > arrow 
+{
 	background: none;
 	color: @entryselfg-color;
 	transition: 150ms ease-in-out;
@@ -891,6 +908,31 @@ combobox menuitem:not(:hover) *
 	border: none;
 	color: @menufg-color;
 }
+
+menu menuitem arrow {
+	min-height: 16px;
+	min-width: 16px; 
+	background: none
+}
+
+menu menuitem arrow:dir(ltr) {
+	-gtk-icon-source: image(
+		-gtk-recolor(url("assets/pan-symbolic.svg")),
+		-gtk-recolor(url("assets/pan-symbolic.png"))
+	);
+	-gtk-icon-transform: rotate(-90deg);
+	margin-left: 8px;
+}
+
+menu menuitem arrow:dir(rtl) {
+	-gtk-icon-source: image(
+		-gtk-recolor(url("assets/pan-symbolic.svg")),
+		-gtk-recolor(url("assets/pan-symbolic.png"))
+	);
+	-gtk-icon-transform: rotate(90deg);
+	margin-right: 8px;
+}
+
 
 textview.view text, entry, entry.combo {
 	/* Members: GtkEntry. */
