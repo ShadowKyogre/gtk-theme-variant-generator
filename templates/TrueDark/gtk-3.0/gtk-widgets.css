@@ -570,6 +570,10 @@ separator {
 	border-top: 1px solid shade(@background-color, 2.4);
 }
 
+menu separator, popover.menu separator {
+	margin:4px;
+}
+
 paned separator {
 	min-height:1px;
 	min-width: 1px;
@@ -923,7 +927,16 @@ selection, combobox entry selection
 	background: @entryselbg-color;
 }
 
-menu menuitem:hover, menubar>menuitem:hover, menubar menuitem:hover
+popover.menu box {
+	background:none;
+}
+
+popover.menu modelbutton {
+	padding:4px;
+}
+
+menu menuitem:hover, menubar>menuitem:hover, menubar menuitem:hover,
+popover.menu modelbutton:hover
 /*.cell:selected, GtkComboBox .cell:hover*/
 {
 	color: @entryselfg-color;
@@ -984,7 +997,8 @@ menubar > menuitem > label  {
 
 menu menuitem:hover > label,
 menu menuitem:hover > label > accelerator,
-menu menuitem:hover > image
+menu menuitem:hover > image,
+popover.menu :hover label
 {
 	background: none;
 	color: @entryselfg-color;
@@ -1146,6 +1160,10 @@ scrolledwindow overshoot
 
 stackswitcher button {
 	padding: 4px 8px;
+}
+
+popover, overlay toolbar {
+	border: 1px solid shade(@background-color, 3);
 }
 
 /*
