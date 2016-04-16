@@ -926,6 +926,7 @@ menu menuitem:hover, menubar>menuitem:hover, menubar menuitem:hover
 }
 
 treeview.view:selected,
+iconview.view:selected,
 .sidebar-row:selected *
 {
 	color: @entryselfg-color;
@@ -936,6 +937,8 @@ treeview.view:selected,
 
 treeview.view:active,
 treeview.view:selected:focus,
+iconview.view:active,
+iconview.view:selected:focus,
 .sidebar-row:selected:focus *
 {
 	color: @entryselfg-color;
