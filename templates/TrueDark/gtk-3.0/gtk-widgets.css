@@ -788,6 +788,11 @@ progressbar.vertical trough {
 	min-width: 24px;
 }
 
+progressbar.vertical text  {
+	margin-right: 36px;
+	margin-left: -36px;
+}
+
 .arrow {
 	/* Members: GtkArrow. */
 }
