@@ -698,8 +698,7 @@ button.link {
 progressbar progress {
 	color: @entryselfg-color;
 	box-shadow: inset 0 0 0 2px alpha(shade(@entryselbg-color, 4.8), 0.4),
-	            inset 0 0 0 1px alpha(shade(@entryselbg-color, 0.5), 1.0);
-	border: 1px solid shade(@background-color, 0.5);
+	            inset 0 0 0 1px alpha(shade(@entryselbg-color, 1.0), 1.0);
 }
 
 progressbar.horizontal progress {
