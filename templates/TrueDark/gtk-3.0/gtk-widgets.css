@@ -808,7 +808,7 @@ label, label:disabled {
 	background:none;
 }
 
-selection
+selection, combobox entry selection
 {
 	color: @entryselfg-color;
 	background: @entryselbg-color;
