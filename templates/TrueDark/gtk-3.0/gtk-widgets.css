@@ -1027,10 +1027,16 @@ entry:disabled {
 	/*background-color: shade(@entrybg-color,0.85);*/
 }
 
-.expander {
-	/* Members: GtkExpander. */
+/* Members: GtkExpander. */
+expander > title > arrow {
+	min-width: 16px;
+	min-height: 16px;
+	background: -gtk-icontheme('pan-end-symbolic');
 }
 
+expander > title > arrow:checked {
+	background: -gtk-icontheme('pan-down-symbolic');
+}
 
 combobox button.combo {
 	background: inherit;
