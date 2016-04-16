@@ -109,6 +109,16 @@ radio:indeterminate, check:indeterminate {
 	);
 }
 
+check:checked, radio:checked,
+check:indeterminate, radio:indeterminate
+{
+	-gtk-icon-shadow: 0px 0px 2px shade(@entryselfg-color, 1.3);
+}
+
+check:checked:disabled, radio:checked:disabled
+{
+	-gtk-icon-shadow: 0px 0px 2px shade(@entryselbg-color, 0.3);
+}
 
 menuitem radio, menuitem check {
 	min-height: 16px;
