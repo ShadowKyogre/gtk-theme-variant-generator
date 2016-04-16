@@ -43,7 +43,7 @@ image {
 	/* Members: GtkAccelLabel. */
 }
 
-frame :first-child {
+frame border {
 	/* Members: GtkFrame. */
 	border: 1px solid shade(@background-color, 0.6);
 }
@@ -365,6 +365,13 @@ notebook {
 	/* Members: GtkNotebook. */
 }
 
+tab * {
+	border: none; background: none;
+}
+
+tab label + button {
+	margin-left: 8px;
+}
 
 notebook stack {
 	border: 1px solid shade(@background-color,0.5);
