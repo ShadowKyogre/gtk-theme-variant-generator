@@ -881,7 +881,10 @@ menubar > menuitem:hover > label {
 	transition: 150ms ease-in-out;
 }
 
-menuitem > label, menuitem > label > accelerator {
+menuitem > label,
+menuitem > label > accelerator,
+combobox menuitem:not(:hover) *
+{
 	border: none;
 	color: @menufg-color;
 }
