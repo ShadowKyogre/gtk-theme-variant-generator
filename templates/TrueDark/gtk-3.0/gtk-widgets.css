@@ -315,8 +315,30 @@ scrollbar slider {
 	box-shadow: inset 0 0 0 1px shade(@entryselbg-color, 2.0);
 }
 
-scrollbar.horizontal button { min-width: 8px; }
-scrollbar.vertical button { min-height: 8px; }
+scrollbar button {
+	min-width: 8px;
+	min-height: 8px;
+	padding: 4px;
+}
+
+scrollbar button {
+	-gtk-icon-source: image(
+		-gtk-recolor(url("assets/pan-symbolic.svg")),
+		-gtk-recolor(url("assets/pan-symbolic.png"))
+	);
+}
+
+scrollbar.vertical button.up {
+	-gtk-icon-transform: rotate(180deg);
+}
+
+scrollbar.horizontal button.up {
+	-gtk-icon-transform: rotate(90deg);
+}
+
+scrollbar.horizontal button.down {
+	-gtk-icon-transform: rotate(-90deg);
+}
 
 scrollbar.vertical slider {
 	background: -gtk-gradient(linear, 0 0, 0.5 0, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
@@ -354,6 +376,7 @@ scrollbar.horizontal slider {
 
 scrollbar trough {
 	border-radius: 0px;
+	margin: 0px;
 }
 
 /*
