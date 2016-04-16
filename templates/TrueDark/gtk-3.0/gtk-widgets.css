@@ -68,7 +68,7 @@ radio:checked, check:checked, radio:indeterminate, check:indeterminate {
 }
 
 
-radio, check {
+radio, check, treeview.view check:not(:checked) {
 	background: @entryselbg-color;
 	color: @entryselfg-color;
 	box-shadow: inset 0px 0px 1px 1px shade(@background-color, 0.8);
