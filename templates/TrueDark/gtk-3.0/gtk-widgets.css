@@ -817,6 +817,34 @@ progressbar.vertical text  {
 	margin-left: -36px;
 }
 
+@keyframes vstripe_move
+{
+	0% {background-position:  left top, 0 0;}
+	100% {background-position:  left top, 0 40px;}
+}
+
+@keyframes hstripe_move
+{
+	0% {background-position:  left top, 0 0;}
+	100% {background-position:  left top, 40px 0;}
+}
+
+progressbar.vertical progress.top {
+	animation: vstripe_move 1s linear infinite;
+}
+
+progressbar.vertical progress.bottom {
+	animation: vstripe_move 1s linear reverse infinite;
+}
+
+progressbar.horizontal progress.right {
+	animation: hstripe_move 1s linear infinite;
+}
+
+progressbar.horizontal progress.left {
+	animation: hstripe_move 1s linear reverse infinite;
+}
+
 .arrow {
 	/* Members: GtkArrow. */
 }
