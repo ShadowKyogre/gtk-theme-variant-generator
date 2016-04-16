@@ -465,6 +465,11 @@ style "radiocheck"
 {
 	text[NORMAL]	= @selected_fg_color	# Color for selected checks/radio items.
 	text[PRELIGHT]	= @selected_fg_color	# Color for selected checks/radio items on prelight.
+
+	# Why is bg[NORMAL] even used for inactive checkboxes?!
+	bg[NORMAL] = shade(0.7, @selected_bg_color)
+	base[NORMAL] = @selected_bg_color
+
 	engine "murrine"{
 	    roundness = 2
 	    contrast = 1.03
