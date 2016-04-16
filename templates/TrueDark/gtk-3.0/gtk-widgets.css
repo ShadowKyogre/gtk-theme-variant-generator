@@ -854,7 +854,20 @@ treeview.view:selected:focus,
 	                color-stop(1.0, shade(@entryselbg-color, 0.9)));
 }
 
+menubar {
+	background: @background-color;
+}
+
+menubar > menuitem {
+	background: none;
+}
+
+menubar > menuitem > label  {
+	color: @foreground-color;
+}
+
 menu menuitem:hover > label,
+menu menuitem:hover > label > accelerator,
 menu menuitem:hover > image
 {
 	background: none;
@@ -868,8 +881,9 @@ menubar > menuitem:hover > label {
 	transition: 150ms ease-in-out;
 }
 
-menuitem label, menubar label {
+menuitem > label, menuitem > label > accelerator {
 	border: none;
+	color: @menufg-color;
 }
 
 textview.view text, entry, entry.combo {
