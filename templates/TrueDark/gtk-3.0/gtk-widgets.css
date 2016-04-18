@@ -1117,12 +1117,16 @@ entry.combo + button.combo arrow {
 	padding: 0px;
 }
 
-switch.trough, switch slider {
+switch slider {
 	border-radius: 0px;
 }
 
-switch:focus {
-	box-shadow: inset 0px 0px 0 10px alpha(@entryselbg-color, 0.2),
+switch {
+	box-shadow: inset 0 0 4px 2px shade(@background-color, 0.5);
+}
+
+switch:focus slider {
+	box-shadow: inset 0px 0px 0 13px alpha(@entryselbg-color, 0.2),
 	            inset 0px 0px 0 1px @entryselbg-color;
 }
 
