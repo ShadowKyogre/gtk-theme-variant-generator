@@ -988,6 +988,7 @@ menubar {
 
 menubar > menuitem {
 	background: none;
+	padding: 4px;
 }
 
 menubar > menuitem > label  {
