@@ -574,10 +574,11 @@ menu separator, popover.menu separator {
 	margin:4px;
 }
 
-paned separator {
+paned > separator {
 	min-height:1px;
 	min-width: 1px;
 	border: none;
+	margin: 2px;
 }
 
 paned.horizontal > separator {
