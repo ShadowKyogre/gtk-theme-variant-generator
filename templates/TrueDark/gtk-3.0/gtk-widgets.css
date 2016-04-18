@@ -1166,7 +1166,7 @@ stackswitcher button {
 	padding: 4px 8px;
 }
 
-popover, overlay toolbar {
+popover, overlay > toolbar {
 	border: 1px solid shade(@background-color, 3);
 }
 
