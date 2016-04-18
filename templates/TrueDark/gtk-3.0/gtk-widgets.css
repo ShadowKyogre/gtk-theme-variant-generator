@@ -793,11 +793,13 @@ progressbar progress {
 progressbar.horizontal progress {
 	min-height: 24px;
 	min-width: 0px;
+	background-repeat: repeat-x;
+	background-size: 40px 200%;
 }
 
 progressbar.horizontal progress.left {
 	/* Members: GtkProgressBar, GtkCellRendererProgress. */
-	background: -gtk-gradient(linear, 0 0, 0 0.5, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
+	background-image: -gtk-gradient(linear, 0 0, 0 0.5, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
 	                color-stop(0.50,alpha(shade(@entryselbg-color,1.7), 0.5)),
 	                color-stop(0.51,alpha(shade(@entryselbg-color,2.0), 0.5)),
 	                color-stop(0.52, rgba(0, 0, 0, 0))),
@@ -808,12 +810,10 @@ progressbar.horizontal progress.left {
 	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
 	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
 	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
-	background-repeat: repeat-x;
-	background-size: 40px 200%;
 }
 
 progressbar.horizontal progress.right, progressbar.horizontal progress.pulse {
-	background: -gtk-gradient(linear, 0 0, 0 0.5, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
+	background-image: -gtk-gradient(linear, 0 0, 0 0.5, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
 	                color-stop(0.50,alpha(shade(@entryselbg-color,1.7), 0.5)),
 	                color-stop(0.51,alpha(shade(@entryselbg-color,2.0), 0.5)),
 	                color-stop(0.52, rgba(0, 0, 0, 0))),
@@ -824,8 +824,6 @@ progressbar.horizontal progress.right, progressbar.horizontal progress.pulse {
 	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
 	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
 	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
-	background-repeat: repeat-x;
-	background-size: 40px 200%;
 }
 
 progressbar.horizontal trough {
@@ -835,10 +833,12 @@ progressbar.horizontal trough {
 progressbar.vertical progress {
 	min-width: 24px;
 	min-height: 0px;
+	background-repeat: repeat-y;
+	background-size: 200% 40px;
 }
 
 progressbar.vertical progress.bottom {
-	background: -gtk-gradient(linear, 0 0, 0.5 0, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
+	background-image: -gtk-gradient(linear, 0 0, 0.5 0, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
 	                color-stop(0.50,alpha(shade(@entryselbg-color,1.7), 0.5)),
 	                color-stop(0.51,alpha(shade(@entryselbg-color,2.0), 0.5)),
 	                color-stop(0.52, rgba(0, 0, 0, 0))),
@@ -849,12 +849,10 @@ progressbar.vertical progress.bottom {
 	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
 	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
 	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
-	background-repeat: repeat-y;
-	background-size: 200% 40px;
 }
 
 progressbar.vertical progress.top {
-	background: -gtk-gradient(linear, 0 0, 0.5 0, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
+	background-image: -gtk-gradient(linear, 0 0, 0.5 0, color-stop(0.0, alpha(shade(@entryselbg-color, 1.6), 0.5) ),
 	                color-stop(0.50,alpha(shade(@entryselbg-color,1.7), 0.5)),
 	                color-stop(0.51,alpha(shade(@entryselbg-color,2.0), 0.5)),
 	                color-stop(0.52, rgba(0, 0, 0, 0))),
@@ -865,8 +863,6 @@ progressbar.vertical progress.top {
 	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
 	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
 	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
-	background-repeat: repeat-y;
-	background-size: 200% 40px;
 }
 
 progressbar.vertical trough {
@@ -890,6 +886,7 @@ progressbar.vertical text  {
 	100% {background-position:  left top, 40px 0;}
 }
 
+/*
 progressbar.vertical progress.top {
 	animation: vstripe_move 1s linear infinite;
 }
@@ -905,6 +902,7 @@ progressbar.horizontal progress.right {
 progressbar.horizontal progress.left {
 	animation: hstripe_move 1s linear reverse infinite;
 }
+*/
 
 .arrow {
 	/* Members: GtkArrow. */
