@@ -789,6 +789,7 @@ progressbar progress {
 	color: @entryselfg-color;
 	box-shadow: inset 0 0 0 2px alpha(shade(@entryselbg-color, 4.8), 0.4),
 	            inset 0 0 0 1px alpha(shade(@entryselbg-color, 1.0), 1.0);
+	background-color: @entryselbg-color;
 }
 
 progressbar.horizontal progress {
@@ -806,10 +807,10 @@ progressbar.horizontal progress.left {
 	                color-stop(0.52, rgba(0, 0, 0, 0))),
 
 	            -gtk-gradient(linear, 0 0, 1 1,
-	                color-stop(0.0, @entryselbg-color),
-	                color-stop(0.25, @entryselbg-color), color-stop(0.26, shade(@entryselbg-color, 0.90)),
-	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
-	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.0, transparent),
+	                color-stop(0.25, transparent), color-stop(0.26, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, transparent),
+	                color-stop(0.75, transparent), color-stop(0.76, shade(@entryselbg-color, 0.90)),
 	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
 }
 
@@ -820,10 +821,10 @@ progressbar.horizontal progress.right, progressbar.horizontal progress.pulse {
 	                color-stop(0.52, rgba(0, 0, 0, 0))),
 
 	            -gtk-gradient(linear, 0 1, 1 0,
-	                color-stop(0.0, @entryselbg-color),
-	                color-stop(0.25, @entryselbg-color), color-stop(0.26, shade(@entryselbg-color, 0.90)),
-	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
-	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.0, transparent),
+	                color-stop(0.25, transparent), color-stop(0.26, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, transparent),
+	                color-stop(0.75, transparent), color-stop(0.76, shade(@entryselbg-color, 0.90)),
 	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
 }
 
@@ -845,10 +846,10 @@ progressbar.vertical progress.bottom {
 	                color-stop(0.52, rgba(0, 0, 0, 0))),
 
 	            -gtk-gradient(linear, 0 0, 1 1,
-	                color-stop(0.0, @entryselbg-color),
-	                color-stop(0.25, @entryselbg-color), color-stop(0.26, shade(@entryselbg-color, 0.90)),
-	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
-	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.0, transparent),
+	                color-stop(0.25, transparent), color-stop(0.26, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, transparent),
+	                color-stop(0.75, transparent), color-stop(0.76, shade(@entryselbg-color, 0.90)),
 	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
 }
 
@@ -859,10 +860,10 @@ progressbar.vertical progress.top {
 	                color-stop(0.52, rgba(0, 0, 0, 0))),
 
 	            -gtk-gradient(linear, 0 1, 1 0,
-	                color-stop(0.0, @entryselbg-color),
-	                color-stop(0.25, @entryselbg-color), color-stop(0.26, shade(@entryselbg-color, 0.90)),
-	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, @entryselbg-color),
-	                color-stop(0.75, @entryselbg-color), color-stop(0.76, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.0, transparent),
+	                color-stop(0.25, transparent), color-stop(0.26, shade(@entryselbg-color, 0.90)),
+	                color-stop(0.50, shade(@entryselbg-color, 0.90)), color-stop(0.51, transparent),
+	                color-stop(0.75, transparent), color-stop(0.76, shade(@entryselbg-color, 0.90)),
 	                color-stop(1.00, shade(@entryselbg-color, 0.90)));
 }
 
