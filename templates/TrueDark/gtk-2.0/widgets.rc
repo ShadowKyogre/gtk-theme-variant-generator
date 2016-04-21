@@ -462,6 +462,11 @@ style "radiocheck"
 	}
 }
 
+style "separators" {
+	# Surprisingly enough, this handles the handle colors
+	bg[NORMAL] = shade(2.4, @bg_color)
+}
+
 style "nautilus-location"
 {
 	bg[NORMAL] = mix(0.60, @bg_color, @selected_bg_color)
@@ -495,6 +500,10 @@ class "*HandleBox" style "toolbar"
 class "GtkToolbar"   style "toolbar" 
 widget_class "*HandleBox" style "toolbar"
 widget_class "*<GtkToolbar>.*"   style "toolbar-item"
+
+# separators
+widget_class "*<GtkPaned>" style "separators"
+class "GtkSeparator" style "separators"
 
 #
 # Toolbar exceptions:
