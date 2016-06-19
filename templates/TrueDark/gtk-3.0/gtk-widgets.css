@@ -24,13 +24,12 @@
 	color: @link-color;
 }
 
-
 *:disabled{
 	/*background-color: shade(@background-color,0.85);*/
 	color: shade(@foreground-color,0.5);
 }
 
-image, button *
+image, button *, frame
 {
 	background: none;
 }
