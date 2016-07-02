@@ -967,6 +967,7 @@ popover.menu modelbutton:hover
 	background: -gtk-gradient(linear, 0 0, 0 1, 
 	                color-stop(0.0, shade(@entryselbg-color, 0.9)),
 	                color-stop(1.0, shade(@entryselbg-color, 0.6)));
+	background-color: @entryselbg-color;
 }
 
 .view:active,
@@ -977,6 +978,7 @@ popover.menu modelbutton:hover
 	background: -gtk-gradient(linear, 0 0, 0 1, 
 	                color-stop(0.0, shade(@entryselbg-color, 1.2)),
 	                color-stop(1.0, shade(@entryselbg-color, 0.9)));
+	background-color: @entryselbg-color;
 }
 
 menubar {
