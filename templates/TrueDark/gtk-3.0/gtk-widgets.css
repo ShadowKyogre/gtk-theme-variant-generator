@@ -970,6 +970,11 @@ popover.menu modelbutton:hover
 	background-color: @entryselbg-color;
 }
 
+rubberband {
+	background: alpha(@entryselbg-color, 0.5);
+	border: 1px solid alpha(@entryselfg-color, 0.5);
+}
+
 .view:active,
 .view:selected:focus,
 .sidebar-row:selected:focus *
