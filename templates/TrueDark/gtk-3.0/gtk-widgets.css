@@ -625,6 +625,12 @@ button, slider, combobox {
 	/* Members: GtkCheckButton, GtkRadioButton, GtkButton, GtkToggleButton. */
 }
 
+.flat {
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
 button > * {
 	padding: 2px;
 }
@@ -776,12 +782,6 @@ button.link * {
 	text-decoration: underline;
 	color: @link-color;
 	padding: 1px 2px;
-}
-
-button.link {
-	background: @background-color;
-	box-shadow: none;
-	border-color: rgba(0, 0, 0, 0);
 }
 
 progressbar progress {
