@@ -29,7 +29,7 @@
 	color: shade(@foreground-color,0.5);
 }
 
-image, button *, frame
+image, button *, frame, box, .view checkbutton, .view radiobutton
 {
 	background: none;
 }
@@ -67,7 +67,7 @@ radio:checked, check:checked, radio:indeterminate, check:indeterminate {
 }
 
 
-radio, check, treeview.view check:not(:checked) {
+radio, check, .view check:not(:checked) {
 	background: @entryselbg-color;
 	color: @entryselfg-color;
 	box-shadow: inset 0px 0px 1px 1px shade(@background-color, 0.8);
@@ -85,7 +85,7 @@ radio {
 	border-radius: 20px;
 }
 
-treeview.view check:checked:selected, check:checked {
+.view check:checked:selected, check:checked {
 	/* workaround until this is fixed upstream */
 	-gtk-icon-source: image(
 		-gtk-recolor(url("assets/checkmark-symbolic.svg")),
@@ -960,8 +960,7 @@ popover.menu modelbutton:hover
     background-size: 40px 200%;
 }
 
-treeview.view:selected,
-iconview.view:selected,
+.view:selected,
 .sidebar-row:selected *
 {
 	color: @entryselfg-color;
@@ -970,10 +969,8 @@ iconview.view:selected,
 	                color-stop(1.0, shade(@entryselbg-color, 0.6)));
 }
 
-treeview.view:active,
-treeview.view:selected:focus,
-iconview.view:active,
-iconview.view:selected:focus,
+.view:active,
+.view:selected:focus,
 .sidebar-row:selected:focus *
 {
 	color: @entryselfg-color;
@@ -1045,8 +1042,7 @@ menu menuitem arrow:dir(rtl) {
 	margin-right: 8px;
 }
 
-
-textview.view text, entry, entry.combo {
+.view text, entry, entry.combo {
 	/* Members: GtkEntry. */
 	color: @entryfg-color;
 	background-color: @entrybg-color;
@@ -1054,7 +1050,12 @@ textview.view text, entry, entry.combo {
 	border: 1px solid shade(@background-color, 0.5);
 }
 
-textview.text:focus, entry:focus {
+.view {
+	color: @entryfg-color;
+	background-color: @entrybg-color;
+}
+
+.text:focus, entry:focus {
 	box-shadow: inset 0 0 0 2px shade(@entryselbg-color, 0.7);
 }
 
