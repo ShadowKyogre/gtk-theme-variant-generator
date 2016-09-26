@@ -24,7 +24,7 @@
 	color: @link-color;
 }
 
-*:disabled{
+*:disabled {
 	/*background-color: shade(@background-color,0.85);*/
 	color: shade(@foreground-color,0.5);
 }
@@ -258,6 +258,10 @@ tooltip * {
 	/* Members: GtkCellRendererToggle. */
 	color: @entryfg-color;
 	background-color: @entrybg-color;
+}
+
+.cell:disabled {
+	color: shade(@entryfg-color, 0.5);
 }
 
 treeview button * {
