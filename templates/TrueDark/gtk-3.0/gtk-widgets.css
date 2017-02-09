@@ -1237,3 +1237,5 @@ popover, overlay > toolbar {
 @import url("widgets/gtkentry.css");
 @import url("widgets/gtkbutton.css");
 @import url("widgets/gtkstatusbar.css");
+
+@import url("apps/kupfer.css");
