@@ -14,10 +14,11 @@
  * https://git.gnome.org/browse/gtk+/tree/gtk/theme/Adwaita/gtk-contained.css?id=48e543fbc88e753a1a496248eaa7f83b5722de86
  */
 
-*
-{
+* {
 	background-color: @background-color;
 	color: @foreground-color;
+	-treeview-expander-size: 13;
+	-treeview-horizontal-separator: 4;
 }
 
 :link {
