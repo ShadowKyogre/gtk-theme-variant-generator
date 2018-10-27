@@ -288,6 +288,7 @@ treeview button {
 
 .popup {
 	/* Members: GtkMenu. */
+	background: @background-color;
 }
 
 .scrolled-window {
