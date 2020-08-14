@@ -1096,6 +1096,15 @@ combobox button.combo {
 combobox entry.combo + button.combo {
 }
 
+combobox window {
+	background: @background-color;
+}
+
+combobox.combobright cellview {
+	background: @foreground-color;
+	color: @background-color;
+}
+
 combobox *:disabled {
 	color: shade(@entryfg-color,0.5);
 }
