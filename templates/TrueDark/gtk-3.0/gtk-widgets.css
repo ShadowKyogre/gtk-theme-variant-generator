@@ -1161,7 +1161,11 @@ switch:checked {
 }
 
 spinbutton > button {
-	padding: 4px 4px;
+	padding: 1em;
+}
+
+spinbutton progress {
+	background: @entryselbg-color;
 }
 
 radiobutton > label, checkbutton > label {
